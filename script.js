@@ -1,125 +1,42 @@
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+$("#dinoCount").textContent=DINOS.length; $("#mutCount").textContent=MUTATIONS.length;
+let dinoFilter="all", mutFilter="all";
 
-const dinoGrid = document.querySelector('#dinoGrid');
-const mutationGrid = document.querySelector('#mutationGrid');
-const dinoSearch = document.querySelector('#dinoSearch');
-const mutationSearch = document.querySelector('#mutationSearch');
-const dinoResultCount = document.querySelector('#dinoResultCount');
-const modal = document.querySelector('#dinoModal');
-const modalContent = document.querySelector('#modalContent');
+const dietTR={carnivore:"Carnivore",herbivore:"Herbivore",omnivore:"Omnivore"};
 
-document.querySelector('#dinoCount').textContent = DINOS.length;
-document.querySelector('#mutationCount').textContent = MUTATIONS.length;
-
-let dinoFilter = 'all';
-let mutationFilter = 'all';
-
-const dietLabel = {
-  carnivore: 'Carnivore',
-  herbivore: 'Herbivore',
-  omnivore: 'Omnivore'
-};
-
-function dinoCard(d) {
-  return `
-  <article class="dino-card" data-name="${d.name.toLowerCase()}" data-diet="${d.diet}" tabindex="0">
-    <div class="dino-image"><img src="${d.image}" alt="${d.name} için stilize specimen görseli"></div>
-    <div class="dino-body">
-      <div class="dino-top">
-        <div>
-          <h3>${d.name}</h3>
-          <div class="dino-tag">${d.tag}</div>
-        </div>
-        <span class="diet-badge ${d.diet}">${dietLabel[d.diet]}</span>
-      </div>
-      <p class="dino-desc">${d.desc}</p>
-    </div>
-  </article>`;
+function dinoCard(d){
+return `<article class="dino-card" data-name="${d.name.toLowerCase()}" tabindex="0">
+<div class="dino-image"><img src="${d.image}" alt="${d.name} specimen görseli"></div>
+<div class="dino-body"><div class="dino-head"><div><h3>${d.name}</h3><small>${d.tier}</small></div><span class="diet ${d.diet}">${dietTR[d.diet]}</span></div>
+<div class="mini"><span>Ağırlık<b>${d.weight}</b></span><span>Hız<b>${d.speed}</b></span><span>Hasar<b>${d.damage}</b></span></div></div></article>`;
 }
-
-function renderDinos() {
-  const q = dinoSearch.value.trim().toLowerCase();
-  const list = DINOS.filter(d => (dinoFilter === 'all' || d.diet === dinoFilter) && d.name.toLowerCase().includes(q));
-  dinoGrid.innerHTML = list.map(dinoCard).join('');
-  dinoResultCount.textContent = `${list.length} kayıt gösteriliyor`;
-
-  dinoGrid.querySelectorAll('.dino-card').forEach((card, i) => {
-    const open = () => openDino(list[i]);
-    card.addEventListener('click', open);
-    card.addEventListener('keydown', e => { if (e.key === 'Enter') open(); });
-  });
+function renderDinos(){
+ let q=$("#dinoSearch").value.toLowerCase().trim(), sort=$("#sortDino").value;
+ let arr=DINOS.filter(d=>(dinoFilter==="all"||d.diet===dinoFilter)&&d.name.toLowerCase().includes(q));
+ arr.sort((a,b)=>String(a[sort]).localeCompare(String(b[sort]),"tr"));
+ $("#dinoGrid").innerHTML=arr.map(dinoCard).join("");
+ $$("#dinoGrid .dino-card").forEach((el,i)=>{let open=()=>openDino(arr[i]);el.onclick=open;el.onkeydown=e=>e.key==="Enter"&&open()});
 }
-
-function openDino(d) {
-  modalContent.innerHTML = `
-    <div class="modal-hero">
-      <div class="modal-art"><img src="${d.image}" alt="${d.name} specimen"></div>
-      <div class="modal-copy">
-        <div class="modal-kicker">${dietLabel[d.diet]} • ${d.tag}</div>
-        <h3>${d.name}</h3>
-        <p>${d.desc}</p>
-        <div class="modal-list">
-          <span>Bu profil sayfasına ileride <b>Diet</b> bilgileri eklenecek.</span>
-          <span><b>Combat</b> ipuçları ve güçlü/zayıf eşleşmeler eklenebilir.</span>
-          <span>Önerilen <b>Mutation Build</b> alanı eklenebilir.</span>
-          <span>Sunucuya özel veriler ayrı bir rozetle gösterilebilir.</span>
-        </div>
-      </div>
-    </div>`;
-  modal.showModal();
+function openDino(d){
+ $("#modalInner").innerHTML=`<div class="modal"><div class="modal-art"><img src="${d.image}" alt="${d.name}"></div><div class="modal-copy">
+ <div class="modal-sub">${dietTR[d.diet]} • ${d.tier}</div><h3>${d.name}</h3>
+ <div class="stat-grid"><div><span>Ağırlık</span><b>${d.weight}</b></div><div><span>Growth</span><b>${d.growth}</b></div><div><span>Koşu Hızı</span><b>${d.speed}</b></div><div><span>Saldırı Gücü</span><b>${d.damage}</b></div><div><span>Zorluk</span><b>${d.difficulty}</b></div><div><span>Sınıf</span><b>${d.tier}</b></div></div>
+ <div class="ability"><b>İmza Yeteneği</b>${d.ability}</div><div class="ability" style="margin-top:10px"><b>Öne Çıkan Özellik</b>${d.highlight}</div>
+ </div></div>`; $("#modal").showModal();
 }
+$("#closeModal").onclick=()=>$("#modal").close(); $("#modal").onclick=e=>e.target===$("#modal")&&$("#modal").close();
 
-document.querySelector('#closeModal').addEventListener('click', () => modal.close());
-modal.addEventListener('click', e => { if (e.target === modal) modal.close(); });
+$("#dinoSearch").oninput=renderDinos; $("#sortDino").onchange=renderDinos;
+$$('#dinoFilters button').forEach(b=>b.onclick=()=>{$$('#dinoFilters button').forEach(x=>x.classList.remove("active"));b.classList.add("active");dinoFilter=b.dataset.filter;renderDinos()});
+$$('.cat[data-diet]').forEach(b=>b.onclick=()=>{dinoFilter=b.dataset.diet;$$('#dinoFilters button').forEach(x=>x.classList.toggle("active",x.dataset.filter===dinoFilter));renderDinos();$("#dinosaurs").scrollIntoView({behavior:"smooth"})});
+$('.cat[data-go="mutations"]').onclick=()=>$("#mutations").scrollIntoView({behavior:"smooth"});
 
-function mutationTypeLabel(type) {
-  return ({all:'Genel', carnivore:'Carnivore', female:'Female Only', slot2:'Slot 2 Exclusive'})[type] || type;
-}
+function mutCard(m){return `<article class="mut-card" data-group="${m.group}">
+<div class="mut-val">${m.value}</div><h3>${m.name}<span>(${m.tr})</span></h3><p>${m.effect}</p>
+<div class="tags"><span class="tag">${m.restriction}</span><span class="tag source">${m.source}</span></div></article>`}
+function renderMuts(){let q=$("#mutSearch").value.toLowerCase().trim();let arr=MUTATIONS.filter(m=>(mutFilter==="all"||m.group===mutFilter)&&(`${m.name} ${m.tr} ${m.effect} ${m.restriction}`).toLowerCase().includes(q));$("#mutGrid").innerHTML=arr.map(mutCard).join("")}
+$("#mutSearch").oninput=renderMuts;
+$$('#mutFilters button').forEach(b=>b.onclick=()=>{$$('#mutFilters button').forEach(x=>x.classList.remove("active"));b.classList.add("active");mutFilter=b.dataset.filter;renderMuts()});
 
-function renderMutations() {
-  const q = mutationSearch.value.trim().toLowerCase();
-  const list = MUTATIONS.filter(m => {
-    const hay = `${m.name} ${m.tr} ${m.effect}`.toLowerCase();
-    return (mutationFilter === 'all' || m.type === mutationFilter) && hay.includes(q);
-  });
-  mutationGrid.innerHTML = list.map(m => `
-    <article class="mutation-card" data-type="${m.type}">
-      <div class="mutation-value">${m.value}</div>
-      <h3>${m.name} <span>(${m.tr})</span></h3>
-      <p>${m.effect}</p>
-      <span class="mutation-type">${mutationTypeLabel(m.type)}</span>
-    </article>`).join('');
-}
-
-document.querySelectorAll('#dinoFilters button').forEach(btn => btn.addEventListener('click', () => {
-  document.querySelectorAll('#dinoFilters button').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  dinoFilter = btn.dataset.filter;
-  renderDinos();
-}));
-
-document.querySelectorAll('#mutationFilters button').forEach(btn => btn.addEventListener('click', () => {
-  document.querySelectorAll('#mutationFilters button').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  mutationFilter = btn.dataset.filter;
-  renderMutations();
-}));
-
-document.querySelectorAll('.category-card[data-filter]').forEach(btn => btn.addEventListener('click', () => {
-  dinoFilter = btn.dataset.filter;
-  document.querySelectorAll('#dinoFilters button').forEach(b => b.classList.toggle('active', b.dataset.filter === dinoFilter));
-  renderDinos();
-  document.querySelector('#dinosaurs').scrollIntoView({behavior:'smooth'});
-}));
-
-document.querySelector('.category-card[data-go="mutations"]').addEventListener('click', () => {
-  document.querySelector('#mutations').scrollIntoView({behavior:'smooth'});
-});
-
-dinoSearch.addEventListener('input', renderDinos);
-mutationSearch.addEventListener('input', renderMutations);
-
-document.querySelector('#menuBtn').addEventListener('click', () => document.querySelector('#nav').classList.toggle('open'));
-document.querySelectorAll('#nav a').forEach(a => a.addEventListener('click', () => document.querySelector('#nav').classList.remove('open')));
-
-renderDinos();
-renderMutations();
+$("#menuBtn").onclick=()=>$("#nav").classList.toggle("open"); $$("#nav a").forEach(a=>a.onclick=()=>$("#nav").classList.remove("open"));
+renderDinos();renderMuts();

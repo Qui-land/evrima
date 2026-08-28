@@ -1,27 +1,30 @@
-# QUI Evrima Database
+# QUI Evrima Database v0.2
 
-The Isle: Evrima için hazırlanmış Türkçe fan rehberi.
+## v0.2 yenilikleri
+- 21 dinozorun profil kartı + detay penceresi
+- Ağırlık, growth, hız, saldırı gücü, zorluk, sınıf, imza yeteneği
+- Dinozor arama, beslenme filtresi ve sıralama
+- 35 mutation için daha gelişmiş filtreleme ve kaynak etiketi
+- Mutation'larda sunucu ekranı / eski not ayrımı
+- Diyet, organlar, Migration ve Elder için hızlı rehber kutuları
+- Baştan düzenlenmiş daha sinematik mor arayüz
+- Mobil uyum iyileştirmeleri
 
-## GitHub Pages ile yayınlama
+## Mevcut siteyi v0.2'ye güncelleme
+Repository'deki mevcut dosyaların üzerine bu paketteki dosyaları yükleyebilirsin.
 
-1. Bu paketin içindeki dosyaların tamamını `Qui-land/evrima` repository'sinin **kök dizinine** yükle.
-2. Commit mesajına örneğin `İlk site sürümü` yaz ve commit et.
-3. Repository'de **Settings > Pages** bölümüne gir.
-4. **Build and deployment > Source** kısmında `Deploy from a branch` seç.
-5. **Branch** olarak `main`, klasör olarak `/(root)` seç ve **Save** de.
-6. GitHub birkaç dakika içinde siteyi yayınlar.
-7. Adres: `https://qui-land.github.io/evrima/`
+GitHub:
+1. `Qui-land/evrima` > **Add file** > **Upload files**
+2. ZIP'i bilgisayarda çıkar.
+3. İçindeki `index.html`, `style.css`, `script.js`, `data.js` ve `assets` klasörünü yükleme alanına sürükle.
+4. Aynı isimli dosyalar değişiklik olarak görünür.
+5. Commit mesajına `v0.2 güncellemesi` yaz.
+6. **Commit changes**.
+7. GitHub Pages mevcut `main / root` ayarıyla otomatik yeniden deploy olur.
 
-## Dosyalar
+Site:
+https://qui-land.github.io/evrima/
 
-- `index.html` — ana sayfa
-- `style.css` — tasarım
-- `data.js` — dinozor ve mutasyon verileri
-- `script.js` — filtreleme, arama ve modal etkileşimleri
-- `assets/dinos/` — dinozor kartları için özgün stilize specimen SVG'leri
-
-## Not
-
-Bu sürümdeki dinozor görselleri kopyalanmış oyun ekranları değildir; siteyi ilk günden temiz ve çalışan hale getirmek için hazırlanmış özgün stilize placeholder/specimen görselleridir. İleride lisanslı veya izinli gerçek The Isle: Evrima görselleriyle değiştirilebilir.
-
-Mutasyon verileri patch ve sunucu ayarlarına göre değişebileceğinden veri güncellemeleri `data.js` içinden yapılır.
+## Kaynak notları
+Dinozor istatistikleri kullanıcının paylaştığı Steam Türkçe Evrima rehberindeki mevcut verilerle dolduruldu.
+Mutation yüzdelerinde kullanıcının oynadığı sunucudan aldığı ekran görüntüleri önceliklendirildi.

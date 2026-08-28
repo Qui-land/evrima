@@ -1,124 +1,90 @@
 <!doctype html>
 <html lang="tr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#09070f">
-  <title>QUI Evrima Database</title>
-  <meta name="description" content="The Isle: Evrima için Türkçe dinozor ve mutasyon rehberi.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>QUI Evrima Database v0.2</title>
+<meta name="description" content="The Isle: Evrima için Türkçe dinozor, mutasyon ve oynanış veritabanı.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="noise"></div>
-
+<div class="scanlines"></div>
 <header class="topbar">
-  <a class="brand" href="#home">
-    <span class="brand-mark">Q</span>
-    <span><b>QUI EVRIMA</b><small>DATABASE</small></span>
-  </a>
-  <nav id="nav">
-    <a href="#home">Ana Sayfa</a>
-    <a href="#dinosaurs">Dinozorlar</a>
-    <a href="#mutations">Mutasyonlar</a>
-    <a href="#about">Hakkında</a>
-  </nav>
-  <button class="menu-btn" id="menuBtn" aria-label="Menü">☰</button>
+<a class="brand" href="#home"><span class="mark">Q</span><span><b>QUI EVRIMA</b><small>DATABASE • v0.2</small></span></a>
+<nav id="nav"><a href="#home">Ana Sayfa</a><a href="#dinosaurs">Dinozorlar</a><a href="#mutations">Mutasyonlar</a><a href="#guides">Rehberler</a><a href="#sources">Kaynaklar</a></nav>
+<button id="menuBtn" class="menu">☰</button>
 </header>
 
 <main id="home">
-  <section class="hero">
-    <div class="hero-glow"></div>
-    <div class="hero-copy">
-      <span class="eyebrow">THE ISLE: EVRIMA • TÜRKÇE</span>
-      <h1>Hayatta kal.<br><span>Avlan. Evrimleş.</span></h1>
-      <p>Dinozorlar, oynanış bilgileri ve güncel mutasyonların tek yerde toplandığı oyuncu odaklı Türkçe Evrima veritabanı.</p>
-      <div class="hero-actions">
-        <a class="btn primary" href="#dinosaurs">Dinozorları keşfet</a>
-        <a class="btn ghost" href="#mutations">Mutasyonlara göz at</a>
-      </div>
-      <div class="hero-stats">
-        <div><strong id="dinoCount">0</strong><span>Dinozor kaydı</span></div>
-        <div><strong id="mutationCount">0</strong><span>Mutasyon kaydı</span></div>
-        <div><strong>3</strong><span>Beslenme türü</span></div>
-      </div>
-    </div>
+<section class="hero">
+<div class="hero-copy">
+<div class="eyebrow">THE ISLE: EVRIMA • TÜRKÇE VERİTABANI</div>
+<h1>Hayatta kal.<br><em>Avlan. Evrimleş.</em></h1>
+<p>Dinozor istatistikleri, yetenekler ve sunucuda gördüğümüz mutation değerleri tek yerde. Hızlı ara, filtrele ve oynadığın türe göre bilgiyi bul.</p>
+<div class="actions"><a class="btn primary" href="#dinosaurs">Dinozorları keşfet</a><a class="btn" href="#mutations">Mutasyonlara göz at</a></div>
+<div class="hero-stats"><div><strong id="dinoCount">0</strong><span>Dinozor</span></div><div><strong id="mutCount">0</strong><span>Doğrulanmış mutation</span></div><div><strong>3</strong><span>Beslenme türü</span></div></div>
+</div>
+<div class="hero-art">
+<div class="moon"></div>
+<div class="mountains"></div>
+<div class="hero-dino">
+<svg viewBox="0 0 620 420" aria-hidden="true">
+<path d="M55 306 C110 258 158 218 204 176 C251 133 314 107 392 111 C465 114 535 146 569 193 C590 221 580 250 547 267 C510 286 456 282 407 270 C365 260 329 267 295 294 C249 331 173 349 110 334 Z" fill="#16121d" stroke="#a855f7" stroke-opacity=".82" stroke-width="4"/>
+<path d="M87 305 C52 331 27 346 2 349" stroke="#8f43cf" stroke-opacity=".45" stroke-width="27" stroke-linecap="round"/>
+<path d="M404 151 C454 141 511 154 550 190 M425 226 C470 235 515 228 552 203" fill="none" stroke="#d6c5e2" stroke-opacity=".42" stroke-width="5"/>
+<path d="M491 179 l24 11 -22 5 18 15 -25 0 16 16" fill="none" stroke="#f3eaf8" stroke-opacity=".68" stroke-width="4"/>
+<circle cx="474" cy="168" r="7" fill="#be69ff"/>
+<path d="M269 293 l-10 96 M338 279 l22 110" stroke="#a855f7" stroke-opacity=".34" stroke-width="19" stroke-linecap="round"/>
+</svg>
+</div>
+<div class="spec-label">SPECIMEN // APEX_01</div>
+</div>
+</section>
 
-    <div class="hero-specimen" aria-hidden="true">
-      <div class="specimen-ring"></div>
-      <div class="specimen-head">
-        <svg viewBox="0 0 600 420">
-          <path d="M80 266 C126 177 221 112 355 106 C433 103 503 134 540 179 C558 203 553 229 525 247 C488 270 433 269 380 260 C340 253 303 262 270 286 C224 321 147 323 94 298 Z" fill="#15121c" stroke="#a855f7" stroke-opacity=".75" stroke-width="4"/>
-          <path d="M370 161 C419 149 470 157 509 184 M395 208 C435 219 479 218 516 199" fill="none" stroke="#ccb8dc" stroke-opacity=".45" stroke-width="5"/>
-          <path d="M459 174 l23 13 -24 4 20 16 -28 0 17 17" fill="none" stroke="#ece2f4" stroke-opacity=".65" stroke-width="4"/>
-          <circle cx="433" cy="164" r="8" fill="#c06cff"/>
-          <path d="M101 264 C66 300 41 323 15 331" fill="none" stroke="#a855f7" stroke-opacity=".38" stroke-width="24" stroke-linecap="round"/>
-        </svg>
-      </div>
-      <div class="specimen-label">EVRIMA FIELD DATABASE <span>// SPECIMEN 01</span></div>
-    </div>
-  </section>
+<section class="category-row">
+<button class="cat carnivore" data-diet="carnivore"><b>Carnivore</b><span>Etçiller</span><i>→</i></button>
+<button class="cat herbivore" data-diet="herbivore"><b>Herbivore</b><span>Otçullar</span><i>→</i></button>
+<button class="cat omnivore" data-diet="omnivore"><b>Omnivore</b><span>Hepçiller</span><i>→</i></button>
+<button class="cat mutations" data-go="mutations"><b>Mutations</b><span>Mutation Database</span><i>→</i></button>
+</section>
 
-  <section class="category-strip">
-    <button class="category-card carnivore" data-filter="carnivore"><span class="cat-icon">☠</span><span><b>Carnivore</b><small>Etçiller</small></span><i>→</i></button>
-    <button class="category-card herbivore" data-filter="herbivore"><span class="cat-icon">❧</span><span><b>Herbivore</b><small>Otçullar</small></span><i>→</i></button>
-    <button class="category-card omnivore" data-filter="omnivore"><span class="cat-icon">◈</span><span><b>Omnivore</b><small>Hepçiller</small></span><i>→</i></button>
-    <button class="category-card mutation-link" data-go="mutations"><span class="cat-icon">⌬</span><span><b>Mutations</b><small>Mutasyonlar</small></span><i>→</i></button>
-  </section>
+<section class="panel" id="dinosaurs">
+<div class="section-title"><div><span class="eyebrow">PLAYABLE DATABASE</span><h2>Dinozorlar</h2><p>İstatistikler paylaştığın Türkçe Steam rehberinden derlendi.</p></div></div>
+<div class="toolbar">
+<div class="filters" id="dinoFilters"><button class="active" data-filter="all">Tümü</button><button data-filter="carnivore">Carnivore</button><button data-filter="herbivore">Herbivore</button><button data-filter="omnivore">Omnivore</button></div>
+<label class="search"><span>⌕</span><input id="dinoSearch" placeholder="Dinozor ara..."></label>
+<select id="sortDino"><option value="name">A → Z</option><option value="diet">Beslenme türü</option><option value="tier">Sınıf</option></select>
+</div>
+<div id="dinoGrid" class="dino-grid"></div>
+</section>
 
-  <section class="content-section" id="dinosaurs">
-    <div class="section-head">
-      <div><span class="eyebrow">PLAYABLE DATABASE</span><h2>Dinozorlar</h2><p>Beslenme türüne göre filtrele. Bir karta tıklayarak dinozor profiline gir.</p></div>
-      <div class="filters" id="dinoFilters">
-        <button class="active" data-filter="all">Tümü</button>
-        <button data-filter="carnivore">Carnivore</button>
-        <button data-filter="herbivore">Herbivore</button>
-        <button data-filter="omnivore">Omnivore</button>
-      </div>
-    </div>
-    <div class="search-row">
-      <label class="search-box"><span>⌕</span><input id="dinoSearch" type="search" placeholder="Dinozor ara..."></label>
-      <span class="result-count" id="dinoResultCount"></span>
-    </div>
-    <div class="dino-grid" id="dinoGrid"></div>
-  </section>
+<section class="panel" id="mutations">
+<div class="section-title"><div><span class="eyebrow">MUTATION DATABASE</span><h2>Mutasyonlar</h2><p>İngilizce ad korunur; Türkçesi parantez içindedir. Sunucudan doğruladığımız yüzde değerleri önceliklidir.</p></div><div class="warning">Patch ve sunucuya göre değerler değişebilir.</div></div>
+<div class="toolbar">
+<div class="filters" id="mutFilters"><button class="active" data-filter="all">Tümü</button><button data-filter="combat">Savaş</button><button data-filter="health">Health</button><button data-filter="food">Beslenme</button><button data-filter="water">Su</button><button data-filter="stamina">Stamina</button></div>
+<label class="search"><span>⌕</span><input id="mutSearch" placeholder="Mutation ara..."></label>
+</div>
+<div id="mutGrid" class="mut-grid"></div>
+</section>
 
-  <section class="content-section mutation-section" id="mutations">
-    <div class="section-head">
-      <div><span class="eyebrow">MUTATION DATABASE</span><h2>Mutasyonlar</h2><p>Orijinal isim korunur, Türkçe karşılığı parantez içinde verilir. Oyun içi terimler doğal kullanımında bırakılır.</p></div>
-      <div class="mutation-note">⚠ Değerler patch veya sunucu ayarına göre değişebilir.</div>
-    </div>
-    <div class="search-row mutation-search-row">
-      <label class="search-box"><span>⌕</span><input id="mutationSearch" type="search" placeholder="Mutasyon ara..."></label>
-      <div class="filters compact" id="mutationFilters">
-        <button class="active" data-filter="all">Tümü</button>
-        <button data-filter="carnivore">Carnivore</button>
-        <button data-filter="female">Female Only</button>
-        <button data-filter="slot2">Slot 2</button>
-      </div>
-    </div>
-    <div class="mutation-grid" id="mutationGrid"></div>
-  </section>
+<section class="panel guides" id="guides">
+<div class="section-title"><div><span class="eyebrow">HIZLI REHBERLER</span><h2>Oyunun Temelleri</h2></div></div>
+<div class="guide-grid">
+<article><span>01</span><h3>Diyet Sistemi</h3><p><b>S</b> Protein, <b>//</b> Yağ ve <b>∴</b> Karbonhidrat. Diet'in %100 olması buff'lardan yararlanmak için önemlidir.</p></article>
+<article><span>02</span><h3>Organlar</h3><p>Bağırsaklar <b>//</b>, akciğerler <b>∴</b>, kalp <b>S</b> verir. Mide, avın son yediği besini taşır.</p></article>
+<article><span>03</span><h3>Migration</h3><p>Herbivore ve Omnivore türleri food için Migration Zone'ları takip eder. Carnivore için bu bölgeler av ve AI fırsatı yaratır.</p></article>
+<article><span>04</span><h3>Elder</h3><p>Prime Elder için görevleri %75 growth öncesinde tamamlamak gerekir; ilerleme ölümle sıfırlanabilir.</p></article>
+</div>
+</section>
 
-  <section class="about" id="about">
-    <div><span class="eyebrow">QUI EVRIMA</span><h2>Oyuncu için hızlı, temiz ve Türkçe.</h2></div>
-    <p>Bu sürüm bir başlangıç build'idir. Dinozor sayfalarına ileride diet, growth, combat, nesting ve önerilen mutation buildleri eklenebilir. Sunucuya özel veriler ayrı etiketlenebilir.</p>
-  </section>
+<section class="sources panel" id="sources">
+<div><span class="eyebrow">VERİ ŞEFFAFLIĞI</span><h2>Kaynak durumu</h2></div>
+<div class="source-grid"><div><b>Sunucu ekranları</b><span>Mutation yüzdeleri için öncelikli</span></div><div><b>Steam Türkçe Rehber</b><span>Dinozor istatistikleri ve mekanik özetleri</span></div><div><b>TheIsle.info</b><span>Eksik mutation ve unlock karşılaştırması</span></div><div><b>DinoDen</b><span>Sunucuya özel farklar ayrı etiketlenecek</span></div></div>
+</section>
 </main>
 
-<dialog id="dinoModal">
-  <button class="close-modal" id="closeModal" aria-label="Kapat">×</button>
-  <div id="modalContent"></div>
-</dialog>
-
-<footer>
-  <div><b>QUI EVRIMA DATABASE</b><span>Türkçe The Isle: Evrima rehberi</span></div>
-  <p>Bağımsız fan projesidir. The Isle ile resmi bir bağlantısı yoktur.</p>
-</footer>
-
-<script src="data.js"></script>
-<script src="script.js"></script>
-</body>
-</html>
+<dialog id="modal"><button id="closeModal">×</button><div id="modalInner"></div></dialog>
+<footer><div><b>QUI EVRIMA DATABASE</b><small>v0.2 • Bağımsız fan projesi</small></div><p>Veriler patch ve sunucu ayarlarına göre değişebilir.</p></footer>
+<script src="data.js"></script><script src="script.js"></script>
+</body></html>

@@ -1,418 +1,593 @@
-window.DINOS = [
+window.DINOS=[
   {
-    "name": "Allosaurus",
-    "diet": "carnivore",
-    "tag": "Orta Boy Etçil",
-    "desc": "Dengeli yapısı, güçlü baskısı ve grup oyunuyla öne çıkan avcı.",
-    "accent": "#ff5a58",
-    "image": "assets/dinos/allosaurus.svg"
-  },
-  {
-    "name": "Carnotaurus",
-    "diet": "carnivore",
-    "tag": "Hızlı Etçil",
-    "desc": "Yüksek koşu hızıyla açık alanda baskı kuran avcı.",
-    "accent": "#ff5a58",
-    "image": "assets/dinos/carnotaurus.svg"
-  },
-  {
-    "name": "Ceratosaurus",
-    "diet": "carnivore",
-    "tag": "Dayanıklı Etçil",
-    "desc": "Yakın dövüş ve uzun süreli baskı için uygun, dayanıklı avcı.",
-    "accent": "#ff5a58",
-    "image": "assets/dinos/ceratosaurus.svg"
-  },
-  {
-    "name": "Deinosuchus",
-    "diet": "carnivore",
-    "tag": "Aquatic Apex",
-    "desc": "Suda pusu kuran, ağır ve son derece tehlikeli avcı.",
-    "accent": "#ff5a58",
-    "image": "assets/dinos/deinosuchus.svg"
-  },
-  {
-    "name": "Dilophosaurus",
-    "diet": "carnivore",
-    "tag": "Gece Avcısı",
-    "desc": "Gece baskısı ve özel saldırılarıyla öne çıkan avcı.",
-    "accent": "#ff5a58",
-    "image": "assets/dinos/dilophosaurus.svg"
-  },
-  {
-    "name": "Herrerasaurus",
-    "diet": "carnivore",
-    "tag": "Pusu Avcısı",
-    "desc": "Hareketliliği ve çevreyi kullanma kabiliyetiyle öne çıkar.",
-    "accent": "#ff5a58",
-    "image": "assets/dinos/herrerasaurus.svg"
-  },
-  {
-    "name": "Omniraptor",
-    "diet": "carnivore",
-    "tag": "Sürü Avcısı",
-    "desc": "Koordineli grup oyununda çok etkili, çevik avcı.",
-    "accent": "#ff5a58",
-    "image": "assets/dinos/omniraptor.svg"
-  },
-  {
-    "name": "Pteranodon",
-    "diet": "carnivore",
-    "tag": "Uçan Avcı",
-    "desc": "Uçuş kabiliyeti sayesinde harita kontrolü ve keşifte güçlü.",
-    "accent": "#ff5a58",
-    "image": "assets/dinos/pteranodon.svg"
-  },
-  {
-    "name": "Troodon",
-    "diet": "carnivore",
-    "tag": "Küçük Sürü Avcısı",
-    "desc": "Küçük boyuna rağmen koordineli sürü oyununda tehdit oluşturur.",
-    "accent": "#ff5a58",
-    "image": "assets/dinos/troodon.svg"
-  },
-  {
-    "name": "Tyrannosaurus",
-    "diet": "carnivore",
-    "tag": "Apex Etçil",
-    "desc": "Çok yüksek baskı ve ağır hasar potansiyeline sahip apex avcı.",
-    "accent": "#ff5a58",
-    "image": "assets/dinos/tyrannosaurus.svg"
+    "name": "Dryosaurus",
+    "diet": "herbivore",
+    "weight": "480 kg",
+    "growth": "40 dk.",
+    "speed": "47,5 km/h",
+    "damage": "40 N",
+    "difficulty": "Kolay",
+    "tier": "Alt Seviye",
+    "ability": "Hızlı yana sıçrayarak saldırılardan kaçabilir.",
+    "highlight": "Yüksek hareket kabiliyeti",
+    "image": "assets/dinos/dryosaurus.svg"
   },
   {
     "name": "Diabloceratops",
     "diet": "herbivore",
-    "tag": "Boynuzlu Otçul",
-    "desc": "Savunma ve yakın dövüşte güçlü, grubunu korumaya uygun.",
-    "accent": "#8edb62",
+    "weight": "3 T",
+    "growth": "7 sa. 45 dk.",
+    "speed": "36 km/h",
+    "damage": "275 N",
+    "difficulty": "Orta",
+    "tier": "Orta Seviye",
+    "ability": "Sparring ile rakiplerini itebilir ve dengesini bozabilir.",
+    "highlight": "Güçlü kafa zırhı",
     "image": "assets/dinos/diabloceratops.svg"
-  },
-  {
-    "name": "Dryosaurus",
-    "diet": "herbivore",
-    "tag": "Çevik Otçul",
-    "desc": "Hız ve çeviklik odaklı, kaçış kabiliyeti yüksek küçük otçul.",
-    "accent": "#8edb62",
-    "image": "assets/dinos/dryosaurus.svg"
   },
   {
     "name": "Hypsilophodon",
     "diet": "herbivore",
-    "tag": "Küçük Otçul",
-    "desc": "Küçük boyutlu, çevik ve hayatta kalmaya odaklı.",
-    "accent": "#8edb62",
+    "weight": "30 kg",
+    "growth": "1 sa. 50 dk.",
+    "speed": "39,6 km/h",
+    "damage": "2 N",
+    "difficulty": "Kolay",
+    "tier": "Alt Seviye",
+    "ability": "Kusarak rakiplerini geçici olarak kör eder.",
+    "highlight": "Kayalara ve eğimli yüzeylere tırmanabilir",
     "image": "assets/dinos/hypsilophodon.svg"
   },
   {
     "name": "Kentrosaurus",
     "diet": "herbivore",
-    "tag": "Zırhlı Otçul",
-    "desc": "Kuyruk savunması ve yakın alan kontrolüyle öne çıkar.",
-    "accent": "#8edb62",
+    "weight": "2.5 T",
+    "growth": "Veri Yok",
+    "speed": "Veri Yok",
+    "damage": "Veri Yok",
+    "difficulty": "Orta",
+    "tier": "Orta Seviye",
+    "ability": "Güçlü kuyruk saldırısı, Savunma Duruşu ve dikenlerden yansıma hasarı.",
+    "highlight": "Yakın dövüşte çok yüksek savunma",
     "image": "assets/dinos/kentrosaurus.svg"
   },
   {
     "name": "Maiasaura",
     "diet": "herbivore",
-    "tag": "Sürü Otçulu",
-    "desc": "Sürü oyunu ve yavru koruma temasıyla öne çıkan otçul.",
-    "accent": "#8edb62",
+    "weight": "2.7 T",
+    "growth": "Veri Yok",
+    "speed": "Veri Yok",
+    "damage": "Veri Yok",
+    "difficulty": "Kolay",
+    "tier": "Orta Seviye",
+    "ability": "Güçlü tekme ve sürü desteği.",
+    "highlight": "Yavruları korumada oldukça başarılı",
     "image": "assets/dinos/maiasaura.svg"
   },
   {
     "name": "Pachycephalosaurus",
     "diet": "herbivore",
-    "tag": "Kafa Darbesi",
-    "desc": "Ani kafa darbeleri ve kırık baskısıyla tehlikeli olabilir.",
-    "accent": "#8edb62",
+    "weight": "500 kg",
+    "growth": "2 sa.",
+    "speed": "41,8 km/h",
+    "damage": "30 N",
+    "difficulty": "Zor",
+    "tier": "Orta Seviye",
+    "ability": "Şarjlı kafa darbesi ile kemik kırabilir.",
+    "highlight": "Kırık oluşturma",
     "image": "assets/dinos/pachycephalosaurus.svg"
   },
   {
     "name": "Stegosaurus",
     "diet": "herbivore",
-    "tag": "Apex Otçul",
-    "desc": "Kuyruk saldırısıyla geniş alan kontrolü sağlayan ağır otçul.",
-    "accent": "#8edb62",
+    "weight": "6 T",
+    "growth": "5 sa.",
+    "speed": "26 km/h",
+    "damage": "50 N - 1000 N",
+    "difficulty": "Orta",
+    "tier": "Apex",
+    "ability": "Güçlü kuyruk saldırıları.",
+    "highlight": "Oyundaki en yüksek hasarlardan biri",
     "image": "assets/dinos/stegosaurus.svg"
   },
   {
     "name": "Tenontosaurus",
     "diet": "herbivore",
-    "tag": "Çok Yönlü Otçul",
-    "desc": "Savunma ve kontra saldırıda dengeli, çok yönlü otçul.",
-    "accent": "#8edb62",
+    "weight": "1.6 T",
+    "growth": "Yaklaşık 3 sa.",
+    "speed": "40 km/h",
+    "damage": "35 N - 360 N",
+    "difficulty": "Çok Zor",
+    "tier": "Orta Seviye",
+    "ability": "Kuyruk saldırısı ile rakiplerini yere düşürebilir.",
+    "highlight": "Çok yönlü savaşçı",
     "image": "assets/dinos/tenontosaurus.svg"
   },
   {
     "name": "Triceratops",
     "diet": "herbivore",
-    "tag": "Apex Otçul",
-    "desc": "Çok yüksek dayanıklılık ve güçlü ön cephe baskısı.",
-    "accent": "#8edb62",
+    "weight": "9.5 T - 13.5 T",
+    "growth": "Veri Yok",
+    "speed": "25 km/h",
+    "damage": "600 N - 1050 N",
+    "difficulty": "Çok Zor",
+    "tier": "Apex",
+    "ability": "Sparring ve güçlü boynuz saldırıları.",
+    "highlight": "Oyundaki en dayanıklı otçullardan biri",
     "image": "assets/dinos/triceratops.svg"
+  },
+  {
+    "name": "Allosaurus",
+    "diet": "carnivore",
+    "weight": "2.6 T",
+    "growth": "10 sa.",
+    "speed": "39,8 km/h",
+    "damage": "175 N",
+    "difficulty": "Orta",
+    "tier": "Orta Seviye",
+    "ability": "Avının üzerine atlayarak Pounce yapabilir.",
+    "highlight": "Dengeli hasar ve yüksek dayanıklılık",
+    "image": "assets/dinos/allosaurus.svg"
+  },
+  {
+    "name": "Tyrannosaurus",
+    "diet": "carnivore",
+    "weight": "9.3 T",
+    "growth": "35 sa. 33 dk.",
+    "speed": "29 km/h",
+    "damage": "699 N",
+    "difficulty": "Zor",
+    "tier": "Apex",
+    "ability": "Crush ve Sparring saldırıları ile rakiplerini etkisiz hale getirebilir.",
+    "highlight": "Oyundaki en güçlü ısırıklardan biri",
+    "image": "assets/dinos/tyrannosaurus.svg"
+  },
+  {
+    "name": "Carnotaurus",
+    "diet": "carnivore",
+    "weight": "1300 kg",
+    "growth": "7 sa. 40 dk.",
+    "speed": "49,5 km/h",
+    "damage": "150 N",
+    "difficulty": "Orta",
+    "tier": "Orta Seviye",
+    "ability": "Charge ile yüksek hızda kafa darbesi yapabilir.",
+    "highlight": "Çok yüksek koşu hızı",
+    "image": "assets/dinos/carnotaurus.svg"
+  },
+  {
+    "name": "Ceratosaurus",
+    "diet": "carnivore",
+    "weight": "1450 kg",
+    "growth": "6 sa.",
+    "speed": "40,3 km/h",
+    "damage": "150 N",
+    "difficulty": "Kolay",
+    "tier": "Orta Seviye",
+    "ability": "Bakteri bulaştıran ısırıkları ile avını zayıflatır.",
+    "highlight": "Dayanıklılık",
+    "image": "assets/dinos/ceratosaurus.svg"
+  },
+  {
+    "name": "Deinosuchus",
+    "diet": "carnivore",
+    "weight": "8 T",
+    "growth": "23 sa. 3 dk.",
+    "speed": "18 km/h",
+    "damage": "500 N",
+    "difficulty": "Orta",
+    "tier": "Apex",
+    "ability": "Lunge ile avını yakalayıp suyun altına çekebilir.",
+    "highlight": "En güçlü su avcısı",
+    "image": "assets/dinos/deinosuchus.svg"
+  },
+  {
+    "name": "Dilophosaurus",
+    "diet": "carnivore",
+    "weight": "700 kg",
+    "growth": "6 sa.",
+    "speed": "47,5 km/h",
+    "damage": "85 N",
+    "difficulty": "Orta",
+    "tier": "Orta Seviye",
+    "ability": "Zehri ile hedefte halüsinasyon oluşturur.",
+    "highlight": "Gece avcılığı",
+    "image": "assets/dinos/dilophosaurus.svg"
+  },
+  {
+    "name": "Herrerasaurus",
+    "diet": "carnivore",
+    "weight": "175 kg",
+    "growth": "5 sa. 25 dk.",
+    "speed": "45 km/h",
+    "damage": "30 N",
+    "difficulty": "Zor",
+    "tier": "Alt Seviye",
+    "ability": "Kayalara ve ağaçlara tırmanabilir.",
+    "highlight": "Pusu kurma",
+    "image": "assets/dinos/herrerasaurus.svg"
+  },
+  {
+    "name": "Omniraptor",
+    "diet": "carnivore",
+    "weight": "395 kg",
+    "growth": "5 sa. 55 dk.",
+    "speed": "46,8 km/h",
+    "damage": "65 N",
+    "difficulty": "Zor",
+    "tier": "Orta Seviye",
+    "ability": "Avının üzerine atlayarak yoğun kanama oluşturur.",
+    "highlight": "Sürü halinde ölümcül",
+    "image": "assets/dinos/omniraptor.svg"
+  },
+  {
+    "name": "Pteranodon",
+    "diet": "carnivore",
+    "weight": "90 kg",
+    "growth": "4 sa. 30 dk.",
+    "speed": "37,8 km/h",
+    "damage": "20 N",
+    "difficulty": "Orta",
+    "tier": "Alt Seviye",
+    "ability": "Uçarak balık avlayabilir.",
+    "highlight": "Uçuş kabiliyeti",
+    "image": "assets/dinos/pteranodon.svg"
+  },
+  {
+    "name": "Troodon",
+    "diet": "carnivore",
+    "weight": "60 kg",
+    "growth": "3 sa. 10 dk.",
+    "speed": "45 km/h",
+    "damage": "15 N",
+    "difficulty": "Orta",
+    "tier": "Alt Seviye",
+    "ability": "Zehrini üst üste uygulayarak ölümcül hasar verir.",
+    "highlight": "Sürü koordinasyonu",
+    "image": "assets/dinos/troodon.svg"
   },
   {
     "name": "Beipiaosaurus",
     "diet": "omnivore",
-    "tag": "Aquatic Hepçil",
-    "desc": "Karada ve suda yaşamaya uyumlu, esnek bir hepçil.",
-    "accent": "#e9ba55",
+    "weight": "90 kg",
+    "growth": "4 sa. 15 dk.",
+    "speed": "32 km/h",
+    "damage": "20 N",
+    "difficulty": "Kolay",
+    "tier": "Alt Seviye",
+    "ability": "Uzun süre su altında kalabilir ve su yüzeyine hızla çıkıp tekrar dalabilir.",
+    "highlight": "Karada ve suda etkili",
     "image": "assets/dinos/beipiaosaurus.svg"
   },
   {
     "name": "Gallimimus",
     "diet": "omnivore",
-    "tag": "Hızlı Hepçil",
-    "desc": "Yüksek kara hızı ve hareketliliğiyle öne çıkan hepçil.",
-    "accent": "#e9ba55",
+    "weight": "425 kg",
+    "growth": "5 sa. 45 dk.",
+    "speed": "50 km/h",
+    "damage": "25 N",
+    "difficulty": "Kolay",
+    "tier": "Alt Seviye",
+    "ability": "Sürü üyeleriyle birlikte hareket ederek kısa süreli hız artışı kazanabilir.",
+    "highlight": "Oyundaki en hızlı kara dinozorlarından biri",
     "image": "assets/dinos/gallimimus.svg"
   }
 ];
 
-window.MUTATIONS = [
+window.MUTATIONS=[
   {
     "name": "Accelerated Prey Drive",
     "tr": "Hızlandırılmış Av Dürtüsü",
     "effect": "Canı %35'in altında olan canlılara daha fazla hasar verirsin.",
     "value": "%10",
-    "type": "carnivore"
+    "group": "combat",
+    "restriction": "Carnivore",
+    "source": "Sunucu ekranı"
   },
   {
     "name": "Advanced Gestation",
     "tr": "Gelişmiş Gebelik",
-    "effect": "Yumurta gestation, incubation ve cooldown süreçlerini hızlandırır.",
+    "effect": "Egg gestation, incubation ve cooldown süreçlerini hızlandırır.",
     "value": "%50",
-    "type": "female"
+    "group": "reproduction",
+    "restriction": "Female Only",
+    "source": "Sunucu ekranı"
   },
   {
     "name": "Augmented Tapetum",
     "tr": "Geliştirilmiş Tapetum",
     "effect": "Gece görüşünü artırır.",
     "value": "—",
-    "type": "carnivore"
+    "group": "utility",
+    "restriction": "Carnivore",
+    "source": "Sunucu ekranı"
   },
   {
     "name": "Cannibalistic",
     "tr": "Kannibalist",
-    "effect": "Normalde cannibal olmayan türlerde kendi türünü tercih edilen av listesine ekler.",
+    "effect": "Kendi türünü tercih edilen prey listesine ekler.",
     "value": "—",
-    "type": "carnivore"
+    "group": "food",
+    "restriction": "Carnivore",
+    "source": "Sunucu ekranı"
   },
   {
     "name": "Cellular Regeneration",
     "tr": "Hücresel Yenilenme",
-    "effect": "Health yenilenmesini bir miktar hızlandırır.",
+    "effect": "Health recovery'yi bir miktar hızlandırır.",
     "value": "%10",
-    "type": "all"
+    "group": "health",
+    "restriction": "Genel",
+    "source": "Sunucu ekranı"
   },
   {
     "name": "Congenital Hypoalgesia",
     "tr": "Doğuştan Hipoaljezi",
     "effect": "Senden daha büyük türlerden gelen hasarı azaltır.",
     "value": "%15",
-    "type": "all"
+    "group": "combat",
+    "restriction": "Genel",
+    "source": "Sunucu ekranı"
   },
   {
     "name": "Efficient Digestion",
     "tr": "Verimli Sindirim",
-    "effect": "Yiyeceğin daha yavaş azalmasını sağlar.",
+    "effect": "Food daha yavaş azalır.",
     "value": "%20",
-    "type": "all"
+    "group": "food",
+    "restriction": "Genel",
+    "source": "Sunucu ekranı"
   },
   {
     "name": "Enhanced Digestion",
     "tr": "Geliştirilmiş Sindirim",
     "effect": "Nutrition decay oranını azaltır.",
     "value": "%10",
-    "type": "all"
+    "group": "food",
+    "restriction": "Unlockable",
+    "source": "Sunucu ekranı"
   },
   {
     "name": "Enlarged Meniscus",
     "tr": "Genişlemiş Menisküs",
-    "effect": "Düşme hasarı health'ten önce stamina'ya gider.",
+    "effect": "Fall damage, health'ten önce stamina'ya vurur.",
     "value": "—",
-    "type": "all"
+    "group": "stamina",
+    "restriction": "Genel",
+    "source": "Sunucu ekranı"
   },
   {
     "name": "Epidermal Fibrosis",
     "tr": "Epidermal Fibrozis",
-    "effect": "Bleed direncini artırır.",
+    "effect": "Bleed resistance'ı artırır.",
     "value": "%15",
-    "type": "all"
+    "group": "combat",
+    "restriction": "Genel",
+    "source": "Sunucu ekranı"
   },
   {
     "name": "Featherweight",
     "tr": "Hafiflik",
-    "effect": "Ayak izlerin daha hızlı kaybolur.",
+    "effect": "Footprint'lerin daha hızlı kaybolur.",
     "value": "%15",
-    "type": "all"
+    "group": "utility",
+    "restriction": "Genel",
+    "source": "Sunucu ekranı"
   },
   {
     "name": "Gastronomic Regeneration",
     "tr": "Gastronomik Yenilenme",
-    "effect": "Yemek yemek az miktarda health yeniler.",
+    "effect": "Yemek yemek küçük miktarda health yeniler.",
     "value": "%5",
-    "type": "slot2"
+    "group": "health",
+    "restriction": "Slot 2 Exclusive",
+    "source": "Sunucu ekranı"
   },
   {
     "name": "Heightened Ghrelin",
     "tr": "Yükseltilmiş Ghrelin",
-    "effect": "Aşırı yeme kapasitesini büyük ölçüde artırır.",
+    "effect": "Overeating kapasitesini büyük ölçüde artırır.",
     "value": "%25",
-    "type": "all"
+    "group": "food",
+    "restriction": "Unlockable",
+    "source": "Sunucu ekranı"
   },
   {
     "name": "Hematophagy",
     "tr": "Hematofaji",
-    "effect": "Cesetlerden beslenirken susuzluğun bir kısmını giderir.",
+    "effect": "Cesetlerden beslenirken thirst geri kazanırsın.",
     "value": "%15",
-    "type": "carnivore"
+    "group": "water",
+    "restriction": "Carnivore",
+    "source": "Sunucu ekranı"
   },
   {
     "name": "Hemomania",
     "tr": "Hemomani",
-    "effect": "Kanayan hedeflere ekstra hasar verirsin.",
+    "effect": "Kanayan hedeflere ekstra damage verirsin.",
     "value": "%5",
-    "type": "carnivore"
-  },
-  {
-    "name": "Multichambered Lungs",
-    "tr": "Çok Odacıklı Akciğerler",
-    "effect": "Stamina regeneration threshold değerini düşürür.",
-    "value": "%5",
-    "type": "all"
-  },
-  {
-    "name": "Nocturnal",
-    "tr": "Gececil",
-    "effect": "Gece health / locked-health regen hızını artırır.",
-    "value": "%5",
-    "type": "all"
-  },
-  {
-    "name": "Osteophagic",
-    "tr": "Osteofajik",
-    "effect": "Kemik tüketerek kırıkların daha hızlı iyileşmesini sağlar.",
-    "value": "—",
-    "type": "carnivore"
-  },
-  {
-    "name": "Osteosclerosis",
-    "tr": "Osteoskleroz",
-    "effect": "Kırık hasarını azaltır.",
-    "value": "%20",
-    "type": "all"
-  },
-  {
-    "name": "Parthenogenesis",
-    "tr": "Partenogenez",
-    "effect": "Eş olmadan nest oluşturabilirsin. Yavrulara aktarılmaz.",
-    "value": "—",
-    "type": "female"
-  },
-  {
-    "name": "Photosynthetic Tissue",
-    "tr": "Fotosentetik Doku",
-    "effect": "Gündüz health / locked-health regen hızını artırır.",
-    "value": "%5",
-    "type": "all"
-  },
-  {
-    "name": "Prolific Reproduction",
-    "tr": "Verimli Üreme",
-    "effect": "Yavrular daha hızlı regen olur, daha az besine ihtiyaç duyar ve daha hızlı büyür.",
-    "value": "%10",
-    "type": "female"
-  },
-  {
-    "name": "Reabsorption",
-    "tr": "Reabsorpsiyon",
-    "effect": "Yağmurda veya tatlı suda yüzerek su kazanırsın.",
-    "value": "—",
-    "type": "all"
-  },
-  {
-    "name": "Reinforced Tendons",
-    "tr": "Güçlendirilmiş Tendonlar",
-    "effect": "Zıplamak daha az stamina harcar.",
-    "value": "%25",
-    "type": "all"
-  },
-  {
-    "name": "Reniculate Kidneys",
-    "tr": "Renikülat Böbrekler",
-    "effect": "Tuzlu su içebilirsin.",
-    "value": "—",
-    "type": "all"
-  },
-  {
-    "name": "Sequential Hermaphroditism",
-    "tr": "Sıralı Hermafroditlik",
-    "effect": "Cinsiyeti değiştirir. Yavrulara aktarılmaz.",
-    "value": "—",
-    "type": "all"
-  },
-  {
-    "name": "Submerged Optical Retention",
-    "tr": "Su Altında Optik Koruma",
-    "effect": "Sualtı görüş menzilini artırır.",
-    "value": "%5",
-    "type": "all"
-  },
-  {
-    "name": "Sustained Hydration",
-    "tr": "Sürdürülebilir Hidrasyon",
-    "effect": "Suyun daha yavaş azalır.",
-    "value": "%20",
-    "type": "all"
-  },
-  {
-    "name": "Traumatic Thrombosis",
-    "tr": "Travmatik Tromboz",
-    "effect": "Dinlenirken kan kaybından ölmeni engeller.",
-    "value": "—",
-    "type": "slot2"
-  },
-  {
-    "name": "Wader",
-    "tr": "Sığ Sularda Gezinici",
-    "effect": "Sığ suda hareket ederken daha az yavaşlarsın.",
-    "value": "%25",
-    "type": "all"
+    "group": "combat",
+    "restriction": "Carnivore",
+    "source": "Sunucu ekranı"
   },
   {
     "name": "Hydro-regenerative",
     "tr": "Hidro-Yenileyici",
     "effect": "Yağmur sırasında health daha hızlı yenilenir.",
     "value": "%25",
-    "type": "all"
+    "group": "health",
+    "restriction": "Genel",
+    "source": "Sunucu ekranı"
   },
   {
     "name": "Hydrodynamic",
     "tr": "Hidrodinamik",
-    "effect": "Yüzme hızını artırır.",
+    "effect": "Swimming speed'i artırır.",
     "value": "%15",
-    "type": "all"
+    "group": "water",
+    "restriction": "Genel",
+    "source": "Sunucu ekranı"
   },
   {
     "name": "Hypermetabolic Inanition",
     "tr": "Hipermetabolik İnanisyon",
-    "effect": "Açlık azaldıkça verdiğin hasar artar.",
+    "effect": "Hunger düştükçe verdiğin damage artar.",
     "value": "%15",
-    "type": "slot2"
+    "group": "combat",
+    "restriction": "Slot 2 / Carnivore",
+    "source": "Sunucu ekranı"
   },
   {
     "name": "Increased Inspiratory Capacity",
     "tr": "Artırılmış İnspirasyon Kapasitesi",
-    "effect": "O₂ kapasitesini artırır.",
+    "effect": "O₂ capacity'yi artırır.",
     "value": "%15",
-    "type": "all"
+    "group": "stamina",
+    "restriction": "Genel",
+    "source": "Sunucu ekranı"
   },
   {
     "name": "Infrasound Communication",
     "tr": "İnfrasonik İletişim",
     "effect": "Chat kullanırken çok daha az ses çıkarırsın.",
     "value": "%50",
-    "type": "all"
+    "group": "utility",
+    "restriction": "Genel",
+    "source": "Sunucu ekranı"
+  },
+  {
+    "name": "Multichambered Lungs",
+    "tr": "Çok Odacıklı Akciğerler",
+    "effect": "Stamina regeneration threshold değerini düşürür.",
+    "value": "%5",
+    "group": "stamina",
+    "restriction": "Unlockable",
+    "source": "Sunucu ekranı"
+  },
+  {
+    "name": "Nocturnal",
+    "tr": "Gececil",
+    "effect": "Gece health / locked-health regen'i hızlandırır.",
+    "value": "%5",
+    "group": "health",
+    "restriction": "Genel",
+    "source": "Sunucu ekranı"
+  },
+  {
+    "name": "Osteophagic",
+    "tr": "Osteofajik",
+    "effect": "Kemik tüketerek fractures'ı daha hızlı iyileştirebilirsin.",
+    "value": "—",
+    "group": "health",
+    "restriction": "Carnivore / Unlockable",
+    "source": "Sunucu ekranı"
+  },
+  {
+    "name": "Osteosclerosis",
+    "tr": "Osteoskleroz",
+    "effect": "Fracture damage'i azaltır.",
+    "value": "%20",
+    "group": "combat",
+    "restriction": "Genel",
+    "source": "Sunucu ekranı"
+  },
+  {
+    "name": "Parthenogenesis",
+    "tr": "Partenogenez",
+    "effect": "Eş olmadan nest oluşturabilirsin. Yavrulara aktarılmaz.",
+    "value": "—",
+    "group": "reproduction",
+    "restriction": "Female Only",
+    "source": "Sunucu ekranı"
+  },
+  {
+    "name": "Photosynthetic Tissue",
+    "tr": "Fotosentetik Doku",
+    "effect": "Gündüz health / locked-health regen'i hızlandırır.",
+    "value": "%5",
+    "group": "health",
+    "restriction": "Genel",
+    "source": "Sunucu ekranı"
+  },
+  {
+    "name": "Prolific Reproduction",
+    "tr": "Verimli Üreme",
+    "effect": "Yavrular daha hızlı regen olur, daha az food ister ve daha hızlı büyür.",
+    "value": "%10",
+    "group": "reproduction",
+    "restriction": "Female Only",
+    "source": "Sunucu ekranı"
+  },
+  {
+    "name": "Reabsorption",
+    "tr": "Reabsorpsiyon",
+    "effect": "Yağmurda veya fresh water'da yüzerken water geri kazanırsın.",
+    "value": "—",
+    "group": "water",
+    "restriction": "Genel",
+    "source": "Sunucu ekranı"
+  },
+  {
+    "name": "Reinforced Tendons",
+    "tr": "Güçlendirilmiş Tendonlar",
+    "effect": "Jumping daha az stamina harcar.",
+    "value": "%25",
+    "group": "stamina",
+    "restriction": "Unlockable",
+    "source": "Sunucu ekranı"
+  },
+  {
+    "name": "Reniculate Kidneys",
+    "tr": "Renikülat Böbrekler",
+    "effect": "Saltwater içebilirsin.",
+    "value": "—",
+    "group": "water",
+    "restriction": "Unlockable",
+    "source": "Sunucu ekranı"
+  },
+  {
+    "name": "Sequential Hermaphroditism",
+    "tr": "Sıralı Hermafroditlik",
+    "effect": "Cinsiyeti değiştirir. Yavrulara aktarılmaz.",
+    "value": "—",
+    "group": "reproduction",
+    "restriction": "Genel",
+    "source": "Sunucu ekranı"
+  },
+  {
+    "name": "Submerged Optical Retention",
+    "tr": "Su Altında Optik Koruma",
+    "effect": "Underwater vision range'i artırır.",
+    "value": "%5",
+    "group": "water",
+    "restriction": "Genel",
+    "source": "Sunucu ekranı"
+  },
+  {
+    "name": "Sustained Hydration",
+    "tr": "Sürdürülebilir Hidrasyon",
+    "effect": "Water daha yavaş azalır.",
+    "value": "%20",
+    "group": "water",
+    "restriction": "Genel",
+    "source": "Sunucu ekranı"
+  },
+  {
+    "name": "Traumatic Thrombosis",
+    "tr": "Travmatik Tromboz",
+    "effect": "Dinlenirken blood loss nedeniyle ölmeni engeller.",
+    "value": "—",
+    "group": "combat",
+    "restriction": "Slot 2 Exclusive",
+    "source": "Eski not / patch'e bağlı"
+  },
+  {
+    "name": "Wader",
+    "tr": "Sığ Sularda Gezinici",
+    "effect": "Shallow water'da daha az yavaşlarsın.",
+    "value": "%25",
+    "group": "water",
+    "restriction": "Genel",
+    "source": "Sunucu ekranı"
   }
 ];

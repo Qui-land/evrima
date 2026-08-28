@@ -1,22 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 210">
-    <defs>
-      <radialGradient id="g" cx="50%" cy="42%">
-        <stop offset="0" stop-color="#8edb62" stop-opacity=".35"/>
-        <stop offset="1" stop-color="#09090d" stop-opacity="0"/>
-      </radialGradient>
-      <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    </defs>
-    <rect width="240" height="210" fill="#09090d"/>
-    <circle cx="122" cy="98" r="92" fill="url(#g)"/>
-    <path d="M72 128 Q28 145 12 120" fill="none" stroke="#8edb62" stroke-opacity=".28" stroke-width="22" stroke-linecap="round"/>
-    <path d="M58 118 Q78 83 122 72 Q154 58 183 78 Q205 92 198 110 Q187 142 153 120 Q130 119 119 135 Q91 152 61 139 Z" fill="#14131a" stroke="#8edb62" stroke-opacity=".72" stroke-width="2"/>
-    <path d="M98 132 L85 188 L101 188 L116 139 M145 126 L151 187 L168 187 L160 122" fill="none" stroke="#8edb62" stroke-opacity=".52" stroke-width="8" stroke-linecap="round"/>
-    <path d="M145 70 L176 40 L162 84" fill="none" stroke="#8edb62" stroke-width="5" stroke-linecap="round"/>
-    <path d="" fill="none" stroke="#8edb62" stroke-width="5"/>
-    <path d="" fill="none" stroke="#8edb62" stroke-width="4"/>
-    <path d="M174 91 l8 7 l-10 1 l7 8 l-12 0" fill="none" stroke="#e9e4ef" stroke-opacity=".55" stroke-width="2"/>
-    <path d="M166 83 a3 3 0 1 0 1 0" fill="#8edb62" stroke="#8edb62" filter="url(#glow)"/>
-    <path d="M42 28 H198 M42 182 H198" stroke="#8edb62" stroke-opacity=".12"/>
-    <text x="18" y="27" fill="#8edb62" font-family="Arial" font-size="8" letter-spacing="2">EVRIMA SPECIMEN</text>
-    <text x="18" y="199" fill="#857b91" font-family="Arial" font-size="10">Pachycephalosaurus</text>
-    </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 180">
+<defs><radialGradient id="r"><stop stop-color="#8edb62" stop-opacity=".30"/><stop offset="1" stop-color="#08080c" stop-opacity="0"/></radialGradient></defs>
+<rect width="260" height="180" fill="#09090e"/><circle cx="130" cy="88" r="90" fill="url(#r)"/>
+<path d="M22 125 Q50 105 85 106 Q100 69 143 67 Q169 66 181 79 Q200 80 221 101 Q203 121 163 111 Q183 126 145 124 Q127 125 114 142 Q80 154 48 141 Z" fill="#17151c" stroke="#8edb62" stroke-opacity=".75" stroke-width="2.3"/>
+<path d="M78 112 Q47 123 18 145" stroke="#8edb62" stroke-opacity=".30" stroke-width="18" stroke-linecap="round"/>
+<path d="M106 130 l-9 36 M139 126 l8 39" stroke="#8edb62" stroke-opacity=".42" stroke-width="7" stroke-linecap="round"/>
+<path d="M164 77 l30 -25 M153 70 l10 -28" stroke="#8edb62" stroke-width="4" fill="none"/>
+<circle cx="175" cy="86" r="3.2" fill="#8edb62"/>
+<path d="M185 102 l8 5 -8 3 7 6 -10 0" fill="none" stroke="#eee8f2" stroke-opacity=".48" stroke-width="1.4"/>
+<text x="14" y="21" fill="#8edb62" font-family="Arial" font-size="8" letter-spacing="2">EVRIMA SPECIMEN</text>
+<text x="14" y="169" fill="#7f7588" font-family="Arial" font-size="9">Pachycephalosaurus</text></svg>
