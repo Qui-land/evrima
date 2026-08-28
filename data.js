@@ -2,275 +2,527 @@ window.DINOS=[
   {
     "name": "Dryosaurus",
     "diet": "herbivore",
-    "weight": "480 kg",
-    "growth": "40 dk.",
-    "speed": "47,5 km/h",
-    "damage": "40",
+    "growth": "4 sa. 25 dk.",
     "difficulty": "Kolay",
     "tier": "Alt Seviye",
     "ability": "Hızlı yana sıçrayarak saldırılardan kaçabilir.",
     "highlight": "Yüksek hareket kabiliyeti",
-    "image": "assets/dinos/dryosaurus.svg"
+    "image": "assets/dinos/dryosaurus.webp",
+    "imageStatus": "pending",
+    "stats": {
+      "normal": {
+        "weight": "130 kg",
+        "speed": "45 km/h",
+        "biteForce": "20"
+      },
+      "primePeak": {
+        "weight": "185 kg",
+        "speed": "50,4 km/h",
+        "biteForce": "23"
+      }
+    },
+    "dataNote": "",
+    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
   },
   {
     "name": "Diabloceratops",
     "diet": "herbivore",
-    "weight": "3 ton",
     "growth": "7 sa. 45 dk.",
-    "speed": "36 km/h",
-    "damage": "275",
     "difficulty": "Orta",
     "tier": "Orta Seviye",
     "ability": "Sparring ile rakiplerini itebilir ve dengesini bozabilir.",
     "highlight": "Güçlü kafa zırhı",
-    "image": "assets/dinos/diabloceratops.svg"
+    "image": "assets/dinos/diabloceratops.webp",
+    "imageStatus": "pending",
+    "stats": {
+      "normal": {
+        "weight": "3 ton",
+        "speed": "36 km/h",
+        "biteForce": "275"
+      },
+      "primePeak": {
+        "weight": "3,9 ton",
+        "speed": "37,8 km/h",
+        "biteForce": "316,25"
+      }
+    },
+    "dataNote": "",
+    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
   },
   {
     "name": "Hypsilophodon",
     "diet": "herbivore",
-    "weight": "30 kg",
     "growth": "1 sa. 50 dk.",
-    "speed": "39,6 km/h",
-    "damage": "2",
     "difficulty": "Kolay",
     "tier": "Alt Seviye",
     "ability": "Kusarak rakiplerini geçici olarak kör eder.",
     "highlight": "Kayalara ve eğimli yüzeylere tırmanabilir",
-    "image": "assets/dinos/hypsilophodon.svg"
+    "image": "assets/dinos/hypsilophodon.webp",
+    "imageStatus": "pending",
+    "stats": {
+      "normal": {
+        "weight": "20 kg",
+        "speed": "39,6 km/h",
+        "biteForce": "2"
+      },
+      "primePeak": {
+        "weight": "22,5 kg",
+        "speed": "39,6 km/h",
+        "biteForce": "2,3"
+      }
+    },
+    "dataNote": "",
+    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
   },
   {
     "name": "Kentrosaurus",
     "diet": "herbivore",
-    "weight": "2,5 ton",
-    "growth": "Doğrulanmadı",
-    "speed": "Doğrulanmadı",
-    "damage": "Doğrulanmadı",
+    "growth": "11 sa. 5 dk.",
     "difficulty": "Orta",
     "tier": "Orta Seviye",
     "ability": "Güçlü kuyruk saldırısı, Savunma Duruşu ve dikenlerden yansıma hasarı.",
     "highlight": "Yakın dövüşte çok yüksek savunma",
-    "image": "assets/dinos/kentrosaurus.svg"
+    "image": "assets/dinos/kentrosaurus.webp",
+    "imageStatus": "pending",
+    "stats": {
+      "normal": {
+        "weight": "1,95 ton",
+        "speed": "39,6 km/h",
+        "biteForce": "30"
+      },
+      "primePeak": {
+        "weight": "2,2 ton",
+        "speed": "39,6 km/h",
+        "biteForce": "34,5"
+      }
+    },
+    "dataNote": "",
+    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
   },
   {
     "name": "Maiasaura",
     "diet": "herbivore",
-    "weight": "2,7 ton",
-    "growth": "Doğrulanmadı",
-    "speed": "Doğrulanmadı",
-    "damage": "Doğrulanmadı",
+    "growth": "7 sa.",
     "difficulty": "Kolay",
     "tier": "Orta Seviye",
     "ability": "Güçlü tekme ve sürü desteği.",
     "highlight": "Yavruları korumada oldukça başarılı",
-    "image": "assets/dinos/maiasaura.svg"
+    "image": "assets/dinos/maiasaura.webp",
+    "imageStatus": "pending",
+    "stats": {
+      "normal": {
+        "weight": "3,7 ton",
+        "speed": "42,3 km/h",
+        "biteForce": "50"
+      },
+      "primePeak": {
+        "weight": "5,3 ton",
+        "speed": "40,1 km/h",
+        "biteForce": "57,5"
+      }
+    },
+    "dataNote": "",
+    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
   },
   {
     "name": "Pachycephalosaurus",
     "diet": "herbivore",
-    "weight": "500 kg",
-    "growth": "2 sa.",
-    "speed": "41,8 km/h",
-    "damage": "30",
+    "growth": "6 sa. 15 dk.",
     "difficulty": "Zor",
     "tier": "Orta Seviye",
     "ability": "Şarjlı kafa darbesi ile kemik kırabilir.",
     "highlight": "Kırık oluşturma",
-    "image": "assets/dinos/pachycephalosaurus.svg"
+    "image": "assets/dinos/pachycephalosaurus.webp",
+    "imageStatus": "pending",
+    "stats": {
+      "normal": {
+        "weight": "700 kg",
+        "speed": "41,8 km/h",
+        "biteForce": "30"
+      },
+      "primePeak": {
+        "weight": "910 kg",
+        "speed": "46,5 km/h",
+        "biteForce": "34,5"
+      }
+    },
+    "dataNote": "Pachy ağırlığında kaynak özet tablosu ile detay growth tablosu arasında fark var; burada detay growth tablosu kullanıldı.",
+    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
   },
   {
     "name": "Stegosaurus",
     "diet": "herbivore",
-    "weight": "6 ton",
-    "growth": "5 sa.",
-    "speed": "26 km/h",
-    "damage": "50–1000",
+    "growth": "17 sa. 55 dk.",
     "difficulty": "Orta",
     "tier": "Apex",
     "ability": "Güçlü kuyruk saldırıları.",
     "highlight": "Oyundaki en yüksek hasarlardan biri",
-    "image": "assets/dinos/stegosaurus.svg"
+    "image": "assets/dinos/stegosaurus.webp",
+    "imageStatus": "pending",
+    "stats": {
+      "normal": {
+        "weight": "6 ton",
+        "speed": "26,2 km/h",
+        "biteForce": "50"
+      },
+      "primePeak": {
+        "weight": "9,3 ton",
+        "speed": "30,6 km/h",
+        "biteForce": "57,5"
+      }
+    },
+    "dataNote": "",
+    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
   },
   {
     "name": "Tenontosaurus",
     "diet": "herbivore",
-    "weight": "1,6 ton",
-    "growth": "Yaklaşık 3 sa.",
-    "speed": "40 km/h",
-    "damage": "35–360",
+    "growth": "5 sa. 40 dk.",
     "difficulty": "Çok Zor",
     "tier": "Orta Seviye",
     "ability": "Kuyruk saldırısı ile rakiplerini yere düşürebilir.",
     "highlight": "Çok yönlü savaşçı",
-    "image": "assets/dinos/tenontosaurus.svg"
+    "image": "assets/dinos/tenontosaurus.webp",
+    "imageStatus": "pending",
+    "stats": {
+      "normal": {
+        "weight": "1,6 ton",
+        "speed": "40,5 km/h",
+        "biteForce": "35"
+      },
+      "primePeak": {
+        "weight": "1,83 ton",
+        "speed": "43,2 km/h",
+        "biteForce": "40,25"
+      }
+    },
+    "dataNote": "",
+    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
   },
   {
     "name": "Triceratops",
     "diet": "herbivore",
-    "weight": "9,5–13,5 ton",
-    "growth": "Doğrulanmadı",
-    "speed": "25 km/h",
-    "damage": "600–1050",
+    "growth": "29 sa. 10 dk.",
     "difficulty": "Çok Zor",
     "tier": "Apex",
     "ability": "Sparring ve güçlü boynuz saldırıları.",
     "highlight": "Oyundaki en dayanıklı otçullardan biri",
-    "image": "assets/dinos/triceratops.svg"
+    "image": "assets/dinos/triceratops.webp",
+    "imageStatus": "pending",
+    "stats": {
+      "normal": {
+        "weight": "9,5 ton",
+        "speed": "23,4 km/h",
+        "biteForce": "900"
+      },
+      "primePeak": {
+        "weight": "12,5 ton",
+        "speed": "25,1 km/h",
+        "biteForce": "1035"
+      }
+    },
+    "dataNote": "Triceratops Bite Force için kaynak özet ve detay growth tablolarında farklı değerler bulunuyor; burada detay growth eğrisi kullanıldı.",
+    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
   },
   {
     "name": "Allosaurus",
     "diet": "carnivore",
-    "weight": "2,6 ton",
     "growth": "10 sa.",
-    "speed": "39,8 km/h",
-    "damage": "175",
     "difficulty": "Orta",
     "tier": "Orta Seviye",
     "ability": "Avının üzerine atlayarak Pounce yapabilir.",
     "highlight": "Dengeli hasar ve yüksek dayanıklılık",
-    "image": "assets/dinos/allosaurus.svg"
+    "image": "assets/dinos/allosaurus.webp",
+    "imageStatus": "pending",
+    "stats": {
+      "normal": {
+        "weight": "2,6 ton",
+        "speed": "39,8 km/h",
+        "biteForce": "175"
+      },
+      "primePeak": {
+        "weight": "3,7 ton",
+        "speed": "39 km/h",
+        "biteForce": "201"
+      }
+    },
+    "dataNote": "",
+    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
   },
   {
     "name": "Tyrannosaurus",
     "diet": "carnivore",
-    "weight": "9,3 ton",
     "growth": "35 sa. 33 dk.",
-    "speed": "29 km/h",
-    "damage": "699",
     "difficulty": "Zor",
     "tier": "Apex",
     "ability": "Crush ve Sparring saldırıları ile rakiplerini etkisiz hale getirebilir.",
     "highlight": "Oyundaki en güçlü ısırıklardan biri",
-    "image": "assets/dinos/tyrannosaurus.svg"
+    "image": "assets/dinos/tyrannosaurus.webp",
+    "imageStatus": "pending",
+    "stats": {
+      "normal": {
+        "weight": "9,3 ton",
+        "speed": "29 km/h",
+        "biteForce": "699"
+      },
+      "primePeak": {
+        "weight": "12,3 ton",
+        "speed": "33,7 km/h",
+        "biteForce": "770"
+      }
+    },
+    "dataNote": "",
+    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
   },
   {
     "name": "Carnotaurus",
     "diet": "carnivore",
-    "weight": "1,3 ton",
     "growth": "7 sa. 40 dk.",
-    "speed": "49,5 km/h",
-    "damage": "150",
     "difficulty": "Orta",
     "tier": "Orta Seviye",
     "ability": "Charge ile yüksek hızda kafa darbesi yapabilir.",
     "highlight": "Çok yüksek koşu hızı",
-    "image": "assets/dinos/carnotaurus.svg"
+    "image": "assets/dinos/carnotaurus.webp",
+    "imageStatus": "pending",
+    "stats": {
+      "normal": {
+        "weight": "1,3 ton",
+        "speed": "49,5 km/h",
+        "biteForce": "150"
+      },
+      "primePeak": {
+        "weight": "1,8 ton",
+        "speed": "55,6 km/h",
+        "biteForce": "172,5"
+      }
+    },
+    "dataNote": "",
+    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
   },
   {
     "name": "Ceratosaurus",
     "diet": "carnivore",
-    "weight": "1,45 ton",
     "growth": "6 sa.",
-    "speed": "40,3 km/h",
-    "damage": "150",
     "difficulty": "Kolay",
     "tier": "Orta Seviye",
     "ability": "Bakteri bulaştıran ısırıkları ile avını zayıflatır.",
     "highlight": "Dayanıklılık",
-    "image": "assets/dinos/ceratosaurus.svg"
+    "image": "assets/dinos/ceratosaurus.webp",
+    "imageStatus": "pending",
+    "stats": {
+      "normal": {
+        "weight": "1,45 ton",
+        "speed": "40,3 km/h",
+        "biteForce": "150"
+      },
+      "primePeak": {
+        "weight": "1,95 ton",
+        "speed": "39,7 km/h",
+        "biteForce": "172,5"
+      }
+    },
+    "dataNote": "",
+    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
   },
   {
     "name": "Deinosuchus",
     "diet": "carnivore",
-    "weight": "8 ton",
     "growth": "23 sa. 3 dk.",
-    "speed": "18 km/h",
-    "damage": "500",
     "difficulty": "Orta",
     "tier": "Apex",
     "ability": "Lunge ile avını yakalayıp suyun altına çekebilir.",
     "highlight": "En güçlü su avcısı",
-    "image": "assets/dinos/deinosuchus.svg"
+    "image": "assets/dinos/deinosuchus.webp",
+    "imageStatus": "pending",
+    "stats": {
+      "normal": {
+        "weight": "8 ton",
+        "speed": "18 km/h",
+        "biteForce": "500"
+      },
+      "primePeak": {
+        "weight": "10,7 ton",
+        "speed": "19,7 km/h",
+        "biteForce": "575"
+      }
+    },
+    "dataNote": "",
+    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
   },
   {
     "name": "Dilophosaurus",
     "diet": "carnivore",
-    "weight": "700 kg",
     "growth": "6 sa.",
-    "speed": "47,5 km/h",
-    "damage": "85",
     "difficulty": "Orta",
     "tier": "Orta Seviye",
     "ability": "Zehri ile hedefte halüsinasyon oluşturur.",
     "highlight": "Gece avcılığı",
-    "image": "assets/dinos/dilophosaurus.svg"
+    "image": "assets/dinos/dilophosaurus.webp",
+    "imageStatus": "pending",
+    "stats": {
+      "normal": {
+        "weight": "700 kg",
+        "speed": "47,5 km/h",
+        "biteForce": "85"
+      },
+      "primePeak": {
+        "weight": "977 kg",
+        "speed": "52,3 km/h",
+        "biteForce": "97,75"
+      }
+    },
+    "dataNote": "",
+    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
   },
   {
     "name": "Herrerasaurus",
     "diet": "carnivore",
-    "weight": "175 kg",
     "growth": "5 sa. 25 dk.",
-    "speed": "45 km/h",
-    "damage": "30",
     "difficulty": "Zor",
     "tier": "Alt Seviye",
     "ability": "Kayalara ve ağaçlara tırmanabilir.",
     "highlight": "Pusu kurma",
-    "image": "assets/dinos/herrerasaurus.svg"
+    "image": "assets/dinos/herrerasaurus.webp",
+    "imageStatus": "pending",
+    "stats": {
+      "normal": {
+        "weight": "175 kg",
+        "speed": "45 km/h",
+        "biteForce": "30"
+      },
+      "primePeak": {
+        "weight": "225 kg",
+        "speed": "46,8 km/h",
+        "biteForce": "34,5"
+      }
+    },
+    "dataNote": "",
+    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
   },
   {
     "name": "Omniraptor",
     "diet": "carnivore",
-    "weight": "395 kg",
     "growth": "5 sa. 55 dk.",
-    "speed": "46,8 km/h",
-    "damage": "65",
     "difficulty": "Zor",
     "tier": "Orta Seviye",
     "ability": "Avının üzerine atlayarak yoğun kanama oluşturur.",
     "highlight": "Sürü halinde ölümcül",
-    "image": "assets/dinos/omniraptor.svg"
+    "image": "assets/dinos/omniraptor.webp",
+    "imageStatus": "pending",
+    "stats": {
+      "normal": {
+        "weight": "395 kg",
+        "speed": "46,8 km/h",
+        "biteForce": "65"
+      },
+      "primePeak": {
+        "weight": "660 kg",
+        "speed": "52,3 km/h",
+        "biteForce": "75,75"
+      }
+    },
+    "dataNote": "",
+    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
   },
   {
     "name": "Pteranodon",
     "diet": "carnivore",
-    "weight": "90 kg",
     "growth": "4 sa. 30 dk.",
-    "speed": "37,8 km/h",
-    "damage": "20",
     "difficulty": "Orta",
     "tier": "Alt Seviye",
     "ability": "Uçarak balık avlayabilir.",
     "highlight": "Uçuş kabiliyeti",
-    "image": "assets/dinos/pteranodon.svg"
+    "image": "assets/dinos/pteranodon.webp",
+    "imageStatus": "pending",
+    "stats": {
+      "normal": {
+        "weight": "90 kg",
+        "speed": "37,8 km/h",
+        "biteForce": "20"
+      },
+      "primePeak": {
+        "weight": "120 kg",
+        "speed": "39,4 km/h",
+        "biteForce": "23"
+      }
+    },
+    "dataNote": "",
+    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
   },
   {
     "name": "Troodon",
     "diet": "carnivore",
-    "weight": "60 kg",
     "growth": "3 sa. 10 dk.",
-    "speed": "45 km/h",
-    "damage": "15",
     "difficulty": "Orta",
     "tier": "Alt Seviye",
     "ability": "Zehrini üst üste uygulayarak ölümcül hasar verir.",
     "highlight": "Sürü koordinasyonu",
-    "image": "assets/dinos/troodon.svg"
+    "image": "assets/dinos/troodon.webp",
+    "imageStatus": "pending",
+    "stats": {
+      "normal": {
+        "weight": "60 kg",
+        "speed": "45 km/h",
+        "biteForce": "15"
+      },
+      "primePeak": {
+        "weight": "79,8 kg",
+        "speed": "52,2 km/h",
+        "biteForce": "17,25"
+      }
+    },
+    "dataNote": "",
+    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
   },
   {
     "name": "Beipiaosaurus",
     "diet": "omnivore",
-    "weight": "90 kg",
-    "growth": "4 sa. 15 dk.",
-    "speed": "32 km/h",
-    "damage": "20",
+    "growth": "3 sa. 40 dk.",
     "difficulty": "Kolay",
     "tier": "Alt Seviye",
     "ability": "Uzun süre su altında kalabilir ve su yüzeyine hızla çıkıp tekrar dalabilir.",
     "highlight": "Karada ve suda etkili",
-    "image": "assets/dinos/beipiaosaurus.svg"
+    "image": "assets/dinos/beipiaosaurus.webp",
+    "imageStatus": "pending",
+    "stats": {
+      "normal": {
+        "weight": "90 kg",
+        "speed": "32 km/h",
+        "biteForce": "20"
+      },
+      "primePeak": {
+        "weight": "90 kg",
+        "speed": "32,9 km/h",
+        "biteForce": "23"
+      }
+    },
+    "dataNote": "",
+    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
   },
   {
     "name": "Gallimimus",
     "diet": "omnivore",
-    "weight": "425 kg",
-    "growth": "5 sa. 45 dk.",
-    "speed": "50 km/h",
-    "damage": "25",
+    "growth": "5 sa. 25 dk.",
     "difficulty": "Kolay",
     "tier": "Alt Seviye",
     "ability": "Sürü üyeleriyle birlikte hareket ederek kısa süreli hız artışı kazanabilir.",
     "highlight": "Oyundaki en hızlı kara dinozorlarından biri",
-    "image": "assets/dinos/gallimimus.svg"
+    "image": "assets/dinos/gallimimus.webp",
+    "imageStatus": "pending",
+    "stats": {
+      "normal": {
+        "weight": "535 kg",
+        "speed": "45,6 km/h",
+        "biteForce": "25"
+      },
+      "primePeak": {
+        "weight": "560 kg",
+        "speed": "54 km/h",
+        "biteForce": "28,75"
+      }
+    },
+    "dataNote": "",
+    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
   }
 ];
 

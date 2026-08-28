@@ -1,21 +1,21 @@
-# QUI Evrima Database v0.3
+# QUI Evrima Database v0.4
 
-Bu sürüm mutation build önerileri içermez.
+## Bu sürümde
+- Dinozor veri yapısı `stats.normal` ve `stats.primePeak` olarak yeniden kuruldu.
+- Profil ekranına **NORMAL / PRIME PEAK (87,5%)** geçişi eklendi.
+- Prime Peak seçildiğinde ağırlık, hız ve Bite Force otomatik değişir.
+- `Hasar` etiketi **Bite Force** olarak düzeltildi.
+- Growth süreleri güncel Quick Facts verilerine göre yenilendi.
+- Büyük **Kaynak Durumu** bölümü ana sayfadan kaldırıldı.
+- Eski çizgi dinozor placeholder'ları kaldırıldı.
+- 21 dinozor için `.webp` görsel slotları hazırlandı; görseller seçildiğinde sadece `assets/dinos/` klasörüne doğru dosya adlarıyla koymak yeterli.
+- Mutation build önerileri eklenmedi.
 
-## v0.3 değişiklikleri
-- `175 N` gibi gösterimler kaldırıldı; **Hasar: 175** formatına geçildi.
-- `2.6 T` gibi yazımlar **2,6 ton** biçimine çevrildi.
-- `Growth` yerine **Büyüme Süresi** kullanılıyor.
-- Dinozor detay penceresi daha profesyonel **Field Dossier** görünümüne geçirildi.
-- Emin olmadığımız statlar **Doğrulanmadı** olarak gösteriliyor.
-- Mutation build önerileri özellikle eklenmedi.
-- v0.3 görsel kalite ve doğruluk güncellemesidir.
+## Prime tanımı
+Sitedeki **Prime Peak**, Prime Elder'ın 87,5% growth civarındaki tepe istatistiklerini ifade eder. 100% Prime Elder değerleri değildir.
 
-## GitHub'a yükleme
-1. `Qui-land/evrima` > **Add file > Upload files**
-2. ZIP'i çıkar.
-3. İçindeki dosyaları ve `assets` klasörünü yükle.
-4. Commit mesajı: `v0.3 kalite güncellemesi`
-5. **Commit changes**
+## Görseller
+Kullanıcı görsel üretimi istemediği için bu pakette yeni AI görseli yoktur. `assets/dinos/README.txt` dosyasında gereken 21 dosya adı bulunur.
 
-Pages ayarına tekrar dokunmana gerek yok.
+## GitHub güncelleme
+ZIP'i çıkar → repo köküne içeriği yükle → commit: `v0.4 normal prime güncellemesi`.
