@@ -15,3 +15,15 @@ footer{max-width:1460px;margin:auto;padding:28px 22px 44px;border-top:1px solid 
 @media(max-width:1100px){.dino-grid{grid-template-columns:repeat(3,1fr)}.mut-grid{grid-template-columns:repeat(2,1fr)}.category-row,.guide-grid,.source-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:820px){.topbar nav{display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;padding:18px;background:#08070b}.topbar nav.open{display:flex}.menu{display:block}.hero{grid-template-columns:1fr;padding:60px 0 30px}.hero-art{height:330px;opacity:.65}.hero-dino{width:min(600px,100%)}.dino-grid{grid-template-columns:repeat(2,1fr)}.section-title{align-items:start;flex-direction:column}.search{margin-left:0}.modal{grid-template-columns:1fr}.modal-art{min-height:280px}}
 @media(max-width:560px){main{padding-left:14px;padding-right:14px}.hero-art{display:none}.hero{min-height:610px}.actions{flex-direction:column}.hero-stats{gap:18px}.category-row,.dino-grid,.mut-grid,.guide-grid,.source-grid{grid-template-columns:1fr}.toolbar{align-items:stretch;flex-direction:column}.search{width:100%}.section-title h2{font-size:42px}footer{flex-direction:column;gap:10px}}
+
+/* v0.3 quality pass */
+.verifyline{margin-top:8px;font-size:11px;font-weight:700}.verifyline.ok{color:#7bcf72}.verifyline.warn{color:#e0ad62}
+.dossier{display:grid;grid-template-columns:.95fr 1.05fr;min-height:540px}
+.dossier-art{position:relative;background:radial-gradient(circle at 50% 45%,#291635,#08070a 72%);display:grid;place-items:center;overflow:hidden}
+.dossier-art:before{content:"SPECIMEN";position:absolute;left:20px;top:22px;font:700 14px "Barlow Condensed";letter-spacing:6px;color:#b65bda}
+.dossier-art:after{content:"QUI EVRIMA / FIELD DOSSIER";position:absolute;left:20px;bottom:20px;font:700 9px "Barlow Condensed";letter-spacing:2px;color:#6d6473}
+.dossier-art img{width:92%;height:92%;object-fit:contain;filter:drop-shadow(0 0 22px #8c3fbb2a)}
+.dossier-copy{padding:52px 38px 36px;background:linear-gradient(145deg,#0c0910,#09080c)}
+.dossier-copy h3{font-size:50px;margin-top:5px}
+.stat-grid .unverified{color:#d7a95f}
+@media(max-width:820px){.dossier{grid-template-columns:1fr}.dossier-art{min-height:300px}}

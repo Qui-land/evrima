@@ -18,9 +18,9 @@ function renderDinos(){
  $$("#dinoGrid .dino-card").forEach((el,i)=>{let open=()=>openDino(arr[i]);el.onclick=open;el.onkeydown=e=>e.key==="Enter"&&open()});
 }
 function openDino(d){
- $("#modalInner").innerHTML=`<div class="modal"><div class="modal-art"><img src="${d.image}" alt="${d.name}"></div><div class="modal-copy">
- <div class="modal-sub">${dietTR[d.diet]} • ${d.tier}</div><h3>${d.name}</h3>
- <div class="stat-grid"><div><span>Ağırlık</span><b>${d.weight}</b></div><div><span>Growth</span><b>${d.growth}</b></div><div><span>Koşu Hızı</span><b>${d.speed}</b></div><div><span>Saldırı Gücü</span><b>${d.damage}</b></div><div><span>Zorluk</span><b>${d.difficulty}</b></div><div><span>Sınıf</span><b>${d.tier}</b></div></div>
+ $("#modalInner").innerHTML=`<div class="dossier"><div class="dossier-art"><img src="${d.image}" alt="${d.name}"></div><div class="dossier-copy">
+ <div class="modal-sub">${dietTR[d.diet]} • ${d.tier}</div><h3>${d.name}</h3><div class="verifyline ${[d.weight,d.growth,d.speed,d.damage].includes("Doğrulanmadı")?"warn":"ok"}">${[d.weight,d.growth,d.speed,d.damage].includes("Doğrulanmadı")?"▲ Bazı istatistikler henüz doğrulanmadı":"● Ana statlar doğrulandı"}</div>
+ <div class="stat-grid"><div><span>Ağırlık</span><b>${d.weight}</b></div><div><span>Büyüme Süresi</span><b>${d.growth}</b></div><div><span>Koşu Hızı</span><b>${d.speed}</b></div><div><span>Hasar</span><b>${d.damage}</b></div><div><span>Zorluk</span><b>${d.difficulty}</b></div><div><span>Sınıf</span><b>${d.tier}</b></div></div>
  <div class="ability"><b>İmza Yeteneği</b>${d.ability}</div><div class="ability" style="margin-top:10px"><b>Öne Çıkan Özellik</b>${d.highlight}</div>
  </div></div>`; $("#modal").showModal();
 }

@@ -1,30 +1,21 @@
-# QUI Evrima Database v0.2
+# QUI Evrima Database v0.3
 
-## v0.2 yenilikleri
-- 21 dinozorun profil kartı + detay penceresi
-- Ağırlık, growth, hız, saldırı gücü, zorluk, sınıf, imza yeteneği
-- Dinozor arama, beslenme filtresi ve sıralama
-- 35 mutation için daha gelişmiş filtreleme ve kaynak etiketi
-- Mutation'larda sunucu ekranı / eski not ayrımı
-- Diyet, organlar, Migration ve Elder için hızlı rehber kutuları
-- Baştan düzenlenmiş daha sinematik mor arayüz
-- Mobil uyum iyileştirmeleri
+Bu sürüm mutation build önerileri içermez.
 
-## Mevcut siteyi v0.2'ye güncelleme
-Repository'deki mevcut dosyaların üzerine bu paketteki dosyaları yükleyebilirsin.
+## v0.3 değişiklikleri
+- `175 N` gibi gösterimler kaldırıldı; **Hasar: 175** formatına geçildi.
+- `2.6 T` gibi yazımlar **2,6 ton** biçimine çevrildi.
+- `Growth` yerine **Büyüme Süresi** kullanılıyor.
+- Dinozor detay penceresi daha profesyonel **Field Dossier** görünümüne geçirildi.
+- Emin olmadığımız statlar **Doğrulanmadı** olarak gösteriliyor.
+- Mutation build önerileri özellikle eklenmedi.
+- v0.3 görsel kalite ve doğruluk güncellemesidir.
 
-GitHub:
-1. `Qui-land/evrima` > **Add file** > **Upload files**
-2. ZIP'i bilgisayarda çıkar.
-3. İçindeki `index.html`, `style.css`, `script.js`, `data.js` ve `assets` klasörünü yükleme alanına sürükle.
-4. Aynı isimli dosyalar değişiklik olarak görünür.
-5. Commit mesajına `v0.2 güncellemesi` yaz.
-6. **Commit changes**.
-7. GitHub Pages mevcut `main / root` ayarıyla otomatik yeniden deploy olur.
+## GitHub'a yükleme
+1. `Qui-land/evrima` > **Add file > Upload files**
+2. ZIP'i çıkar.
+3. İçindeki dosyaları ve `assets` klasörünü yükle.
+4. Commit mesajı: `v0.3 kalite güncellemesi`
+5. **Commit changes**
 
-Site:
-https://qui-land.github.io/evrima/
-
-## Kaynak notları
-Dinozor istatistikleri kullanıcının paylaştığı Steam Türkçe Evrima rehberindeki mevcut verilerle dolduruldu.
-Mutation yüzdelerinde kullanıcının oynadığı sunucudan aldığı ekran görüntüleri önceliklendirildi.
+Pages ayarına tekrar dokunmana gerek yok.
