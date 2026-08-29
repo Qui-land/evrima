@@ -3,7 +3,7 @@
 <html lang="tr">
 <head>
 <meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
-<title>QUI Evrima Database v0.4</title>
+<title>QUI Evrima Database v0.5</title>
 <meta content="The Isle: Evrima için Türkçe dinozor, mutasyon ve oynanış veritabanı." name="description"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
@@ -12,7 +12,7 @@
 <body>
 <div class="scanlines"></div>
 <header class="topbar">
-<a class="brand" href="#home"><span class="mark">Q</span><span><b>QUI EVRIMA</b><small>DATABASE • v0.4</small></span></a>
+<a class="brand" href="#home"><span class="mark">Q</span><span><b>QUI EVRIMA</b><small>DATABASE • v0.5</small></span></a>
 <nav id="nav"><a href="#home">Ana Sayfa</a><a href="#dinosaurs">Dinozorlar</a><a href="#mutations">Mutasyonlar</a><a href="#guides">Rehberler</a></nav>
 <button class="menu" id="menuBtn">☰</button>
 </header>
@@ -21,22 +21,22 @@
 <div class="hero-copy">
 <div class="eyebrow">THE ISLE: EVRIMA • TÜRKÇE VERİTABANI</div>
 <h1>Hayatta kal.<br/><em>Avlan. Evrimleş.</em></h1>
-<p>Dinozor istatistikleri, yetenekler ve mutation verileri tek yerde. v0.4 ile Normal Adult ve Prime Peak değerleri arasında anında geçiş yapabilirsin.</p>
+<p>Dinozor istatistikleri, yetenekler ve mutation verileri tek yerde. v0.5 ile Normal Adult ve Prime Peak değerleri arasında anında geçiş yapabilirsin.</p>
 <div class="actions"><a class="btn primary" href="#dinosaurs">Dinozorları keşfet</a><a class="btn" href="#mutations">Mutasyonlara göz at</a></div>
 <div class="hero-stats"><div><strong id="dinoCount">0</strong><span>Dinozor</span></div><div><strong id="mutCount">0</strong><span>Doğrulanmış mutation</span></div><div><strong>3</strong><span>Beslenme türü</span></div></div>
 </div>
-<div aria-hidden="true" class="hero-art hero-data"><div class="radar-ring r1"></div><div class="radar-ring r2"></div><div class="radar-ring r3"></div><div class="hero-readout"><span>EVRIMA FIELD DATABASE</span><b>NORMAL / PRIME PEAK</b><small>Prime Peak = 87,5% growth</small></div><div class="hero-coordinate">QUI // v0.4 // LIVE DATA</div></div>
+<div aria-hidden="true" class="hero-art hero-data"><div class="radar-ring r1"></div><div class="radar-ring r2"></div><div class="radar-ring r3"></div><div class="hero-readout"><span>EVRIMA FIELD DATABASE</span><b>NORMAL / PRIME</b><small>Prime aşaması türe göre %87,5 / %92 / %100 olabilir</small></div><div class="hero-coordinate">QUI // v0.5 // LIVE DATA</div></div>
 </section>
 <section class="category-row">
-<button class="cat carnivore" data-diet="carnivore"><b>Carnivore</b><span>Etçiller</span><i>→</i></button>
-<button class="cat herbivore" data-diet="herbivore"><b>Herbivore</b><span>Otçullar</span><i>→</i></button>
-<button class="cat omnivore" data-diet="omnivore"><b>Omnivore</b><span>Hepçiller</span><i>→</i></button>
-<button class="cat mutations" data-go="mutations"><b>Mutations</b><span>Mutation Database</span><i>→</i></button>
+<button class="cat carnivore" data-diet="carnivore" style="--cat-image:url('assets/categories/carnivore.webp')"><span class="cat-copy"><b>Carnivore</b><span>Etçiller</span><small>11 DİNOZOR</small></span><i>→</i></button>
+<button class="cat herbivore" data-diet="herbivore" style="--cat-image:url('assets/categories/herbivore.webp')"><span class="cat-copy"><b>Herbivore</b><span>Otçullar</span><small>9 DİNOZOR</small></span><i>→</i></button>
+<button class="cat omnivore" data-diet="omnivore" style="--cat-image:url('assets/categories/omnivore.webp')"><span class="cat-copy"><b>Omnivore</b><span>Hepçiller</span><small>2 DİNOZOR</small></span><i>→</i></button>
+<button class="cat mutations" data-go="mutations"><span class="cat-copy"><b>Mutations</b><span>Mutation Database</span><small>35 MUTATION</small></span><i>→</i></button>
 </section>
 <section class="panel" id="dinosaurs">
-<div class="section-title"><div><span class="eyebrow">PLAYABLE DATABASE</span><h2>Dinozorlar</h2><p>Kartlara tıklayarak detayları incele. Profil içinde Normal ve Prime Peak değerleri arasında geçiş yapabilirsin.</p></div></div>
+<div class="section-title"><div><span class="eyebrow">PLAYABLE DATABASE</span><h2>Dinozorlar</h2><p>Kartlara tıklayarak detayları incele. Profil içinde Normal ve Prime değerleri arasında geçiş yapabilirsin. Prime aşaması tür bazında ayrıca belirtilir.</p></div></div>
 <div class="toolbar">
-<div class="filters" id="dinoFilters"><button class="active" data-filter="all">Tümü</button><button data-filter="carnivore">Carnivore</button><button data-filter="herbivore">Herbivore</button><button data-filter="omnivore">Omnivore</button></div><div aria-label="Kart stat modu" class="global-mode" id="globalMode" role="group"><button class="active" data-mode="normal">NORMAL</button><button data-mode="primePeak">PRIME PEAK</button></div>
+<div class="filters" id="dinoFilters"><button class="active" data-filter="all">Tümü</button><button data-filter="carnivore">Carnivore</button><button data-filter="herbivore">Herbivore</button><button data-filter="omnivore">Omnivore</button></div><div aria-label="Kart stat modu" class="global-mode" id="globalMode" role="group"><button class="active" data-mode="normal">NORMAL</button><button data-mode="prime">PRIME</button></div>
 <label class="search"><span>⌕</span><input id="dinoSearch" placeholder="Dinozor ara..."/></label>
 <select id="sortDino"><option value="name">A → Z</option><option value="diet">Beslenme türü</option><option value="tier">Sınıf</option></select>
 </div>
@@ -61,6 +61,6 @@
 </section>
 </main>
 <dialog id="modal"><button id="closeModal">×</button><div id="modalInner"></div></dialog>
-<footer><div><b>QUI EVRIMA DATABASE</b><small>v0.4 • Bağımsız fan projesi</small></div><p>Veriler patch ve sunucu ayarlarına göre değişebilir.</p></footer>
+<footer><div><b>QUI EVRIMA DATABASE</b><small>v0.5 • Bağımsız fan projesi</small></div><p>Veriler patch ve sunucu ayarlarına göre değişebilir.</p></footer>
 <script src="data.js"></script><script src="script.js"></script>
 </body></html>

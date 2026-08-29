@@ -4,14 +4,34 @@ let dinoFilter="all", mutFilter="all", cardMode="normal";
 const dietTR={carnivore:"Carnivore",herbivore:"Herbivore",omnivore:"Omnivore"};
 const esc=s=>String(s??"").replace(/[&<>\"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
-function imageBlock(d,cls=""){
- return `<div class="${cls} dino-media"><img src="${d.image}" alt="${esc(d.name)} görseli" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><div class="image-fallback"><span>EVRIMA SPECIMEN</span><b>${esc(d.name)}</b><small>Görsel slotu hazır • WEBP bekleniyor</small></div></div>`;
+function imageCandidates(path){
+ const stem=String(path).replace(/\.(webp|png|jpe?g)$/i,'');
+ return [stem+'.webp',stem+'.png',stem+'.jpg',stem+'.jpeg'];
 }
+function imageBlock(d,cls=""){
+ const candidates=imageCandidates(d.image);
+ const encoded=esc(JSON.stringify(candidates));
+ return `<div class="${cls} dino-media" data-images="${encoded}">
+   <img src="${candidates[0]}" alt="${esc(d.name)} görseli" loading="lazy"
+        onerror="window.tryNextDinoImage(this)">
+   <div class="image-fallback"><span>GÖRSEL BEKLENİYOR</span><b>${esc(d.name)}</b><small>assets/dinos klasörüne ekran görüntüsünü ekle</small></div>
+ </div>`;
+}
+window.tryNextDinoImage=function(img){
+ const box=img.closest('.dino-media');
+ const list=JSON.parse(box.dataset.images||'[]');
+ const current=img.getAttribute('src');
+ const i=list.indexOf(current);
+ if(i>=0 && i<list.length-1){ img.src=list[i+1]; return; }
+ img.style.display='none';
+ const fallback=img.nextElementSibling;
+ if(fallback) fallback.style.display='grid';
+};
 function statMode(d,mode="normal"){return d.stats?.[mode]||d.stats.normal}
 function dinoCard(d){let s=statMode(d,cardMode);return `<article class="dino-card" data-name="${d.name.toLowerCase()}" tabindex="0">
 ${imageBlock(d,"dino-image")}
 <div class="dino-body"><div class="dino-head"><div><h3>${d.name}</h3><small>${d.tier}</small></div><span class="diet ${d.diet}">${dietTR[d.diet]}</span></div>
-<div class="mode-hint">${cardMode==='primePeak'?'PRIME PEAK • 87,5%':'NORMAL ADULT'}</div>
+<div class="mode-hint">${cardMode==='prime'?(d.primeLabel||'PRIME'):'NORMAL ADULT'}</div>
 <div class="mini"><span>Ağırlık<b>${s.weight}</b></span><span>Hız<b>${s.speed}</b></span><span>Bite Force<b>${s.biteForce}</b></span></div></div></article>`;}
 function renderDinos(){
  let q=$("#dinoSearch").value.toLowerCase().trim(), sort=$("#sortDino").value;
@@ -25,15 +45,16 @@ function statsHtml(d,mode){let s=statMode(d,mode);return `
 <div><span>Ağırlık</span><b>${s.weight}</b></div><div><span>Büyüme Süresi</span><b>${d.growth}</b></div><div><span>Koşu Hızı</span><b>${s.speed}</b></div><div><span>Bite Force</span><b>${s.biteForce}</b></div><div><span>Zorluk</span><b>${d.difficulty}</b></div><div><span>Sınıf</span><b>${d.tier}</b></div></div>`}
 function openDino(d){
  const openingMode=cardMode;
+ const caption=mode=>mode==='prime'?(d.primeLabel||'Prime değerleri'):'Normal Adult değerleri';
  $("#modalInner").innerHTML=`<div class="dossier">${imageBlock(d,"dossier-art")}<div class="dossier-copy">
  <div class="modal-sub">${dietTR[d.diet]} • ${d.tier}</div><h3>${d.name}</h3>
- <div class="prime-switch" role="group" aria-label="Stat modu"><button class="${openingMode==='normal'?'active':''}" data-mode="normal">NORMAL</button><button class="${openingMode==='primePeak'?'active':''}" data-mode="primePeak">PRIME PEAK <small>87,5%</small></button></div>
- <div class="mode-caption" id="modeCaption">${openingMode==='primePeak'?'Prime Elder tepe noktası • 87,5% growth':'Normal Adult değerleri'}</div><div id="modalStats">${statsHtml(d,openingMode)}</div>
+ <div class="prime-switch" role="group" aria-label="Stat modu"><button class="${openingMode==='normal'?'active':''}" data-mode="normal">NORMAL</button><button class="${openingMode==='prime'?'active':''}" data-mode="prime">PRIME</button></div>
+ <div class="mode-caption" id="modeCaption">${caption(openingMode)}</div><div id="modalStats">${statsHtml(d,openingMode)}</div>
  <div class="ability"><b>İmza Yeteneği</b>${d.ability}</div><div class="ability" style="margin-top:10px"><b>Öne Çıkan Özellik</b>${d.highlight}</div>
- ${d.dataNote?`<div class="data-note">⚠ ${d.dataNote}</div>`:""}
+ ${d.dataNote?`<div class="data-note">⚑ ${d.dataNote}</div>`:""}
  <div class="source-line">${d.source}</div>
  </div></div>`;
- $$('.prime-switch button').forEach(btn=>btn.onclick=()=>{ $$('.prime-switch button').forEach(x=>x.classList.remove('active')); btn.classList.add('active'); const mode=btn.dataset.mode; $('#modalStats').innerHTML=statsHtml(d,mode); $('#modeCaption').textContent=mode==='primePeak'?'Prime Elder tepe noktası • 87,5% growth':'Normal Adult değerleri'; });
+ $$('.prime-switch button').forEach(btn=>btn.onclick=()=>{ $$('.prime-switch button').forEach(x=>x.classList.remove('active')); btn.classList.add('active'); const mode=btn.dataset.mode; $('#modalStats').innerHTML=statsHtml(d,mode); $('#modeCaption').textContent=caption(mode); });
  $("#modal").showModal();
 }
 $("#closeModal").onclick=()=>$("#modal").close(); $("#modal").onclick=e=>e.target===$("#modal")&&$("#modal").close();

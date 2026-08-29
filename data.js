@@ -1,230 +1,5 @@
 window.DINOS=[
   {
-    "name": "Dryosaurus",
-    "diet": "herbivore",
-    "growth": "4 sa. 25 dk.",
-    "difficulty": "Kolay",
-    "tier": "Alt Seviye",
-    "ability": "Hızlı yana sıçrayarak saldırılardan kaçabilir.",
-    "highlight": "Yüksek hareket kabiliyeti",
-    "image": "assets/dinos/dryosaurus.webp",
-    "imageStatus": "pending",
-    "stats": {
-      "normal": {
-        "weight": "130 kg",
-        "speed": "45 km/h",
-        "biteForce": "20"
-      },
-      "primePeak": {
-        "weight": "185 kg",
-        "speed": "50,4 km/h",
-        "biteForce": "23"
-      }
-    },
-    "dataNote": "",
-    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
-  },
-  {
-    "name": "Diabloceratops",
-    "diet": "herbivore",
-    "growth": "7 sa. 45 dk.",
-    "difficulty": "Orta",
-    "tier": "Orta Seviye",
-    "ability": "Sparring ile rakiplerini itebilir ve dengesini bozabilir.",
-    "highlight": "Güçlü kafa zırhı",
-    "image": "assets/dinos/diabloceratops.webp",
-    "imageStatus": "pending",
-    "stats": {
-      "normal": {
-        "weight": "3 ton",
-        "speed": "36 km/h",
-        "biteForce": "275"
-      },
-      "primePeak": {
-        "weight": "3,9 ton",
-        "speed": "37,8 km/h",
-        "biteForce": "316,25"
-      }
-    },
-    "dataNote": "",
-    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
-  },
-  {
-    "name": "Hypsilophodon",
-    "diet": "herbivore",
-    "growth": "1 sa. 50 dk.",
-    "difficulty": "Kolay",
-    "tier": "Alt Seviye",
-    "ability": "Kusarak rakiplerini geçici olarak kör eder.",
-    "highlight": "Kayalara ve eğimli yüzeylere tırmanabilir",
-    "image": "assets/dinos/hypsilophodon.webp",
-    "imageStatus": "pending",
-    "stats": {
-      "normal": {
-        "weight": "20 kg",
-        "speed": "39,6 km/h",
-        "biteForce": "2"
-      },
-      "primePeak": {
-        "weight": "22,5 kg",
-        "speed": "39,6 km/h",
-        "biteForce": "2,3"
-      }
-    },
-    "dataNote": "",
-    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
-  },
-  {
-    "name": "Kentrosaurus",
-    "diet": "herbivore",
-    "growth": "11 sa. 5 dk.",
-    "difficulty": "Orta",
-    "tier": "Orta Seviye",
-    "ability": "Güçlü kuyruk saldırısı, Savunma Duruşu ve dikenlerden yansıma hasarı.",
-    "highlight": "Yakın dövüşte çok yüksek savunma",
-    "image": "assets/dinos/kentrosaurus.webp",
-    "imageStatus": "pending",
-    "stats": {
-      "normal": {
-        "weight": "1,95 ton",
-        "speed": "39,6 km/h",
-        "biteForce": "30"
-      },
-      "primePeak": {
-        "weight": "2,2 ton",
-        "speed": "39,6 km/h",
-        "biteForce": "34,5"
-      }
-    },
-    "dataNote": "",
-    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
-  },
-  {
-    "name": "Maiasaura",
-    "diet": "herbivore",
-    "growth": "7 sa.",
-    "difficulty": "Kolay",
-    "tier": "Orta Seviye",
-    "ability": "Güçlü tekme ve sürü desteği.",
-    "highlight": "Yavruları korumada oldukça başarılı",
-    "image": "assets/dinos/maiasaura.webp",
-    "imageStatus": "pending",
-    "stats": {
-      "normal": {
-        "weight": "3,7 ton",
-        "speed": "42,3 km/h",
-        "biteForce": "50"
-      },
-      "primePeak": {
-        "weight": "5,3 ton",
-        "speed": "40,1 km/h",
-        "biteForce": "57,5"
-      }
-    },
-    "dataNote": "",
-    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
-  },
-  {
-    "name": "Pachycephalosaurus",
-    "diet": "herbivore",
-    "growth": "6 sa. 15 dk.",
-    "difficulty": "Zor",
-    "tier": "Orta Seviye",
-    "ability": "Şarjlı kafa darbesi ile kemik kırabilir.",
-    "highlight": "Kırık oluşturma",
-    "image": "assets/dinos/pachycephalosaurus.webp",
-    "imageStatus": "pending",
-    "stats": {
-      "normal": {
-        "weight": "700 kg",
-        "speed": "41,8 km/h",
-        "biteForce": "30"
-      },
-      "primePeak": {
-        "weight": "910 kg",
-        "speed": "46,5 km/h",
-        "biteForce": "34,5"
-      }
-    },
-    "dataNote": "Pachy ağırlığında kaynak özet tablosu ile detay growth tablosu arasında fark var; burada detay growth tablosu kullanıldı.",
-    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
-  },
-  {
-    "name": "Stegosaurus",
-    "diet": "herbivore",
-    "growth": "17 sa. 55 dk.",
-    "difficulty": "Orta",
-    "tier": "Apex",
-    "ability": "Güçlü kuyruk saldırıları.",
-    "highlight": "Oyundaki en yüksek hasarlardan biri",
-    "image": "assets/dinos/stegosaurus.webp",
-    "imageStatus": "pending",
-    "stats": {
-      "normal": {
-        "weight": "6 ton",
-        "speed": "26,2 km/h",
-        "biteForce": "50"
-      },
-      "primePeak": {
-        "weight": "9,3 ton",
-        "speed": "30,6 km/h",
-        "biteForce": "57,5"
-      }
-    },
-    "dataNote": "",
-    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
-  },
-  {
-    "name": "Tenontosaurus",
-    "diet": "herbivore",
-    "growth": "5 sa. 40 dk.",
-    "difficulty": "Çok Zor",
-    "tier": "Orta Seviye",
-    "ability": "Kuyruk saldırısı ile rakiplerini yere düşürebilir.",
-    "highlight": "Çok yönlü savaşçı",
-    "image": "assets/dinos/tenontosaurus.webp",
-    "imageStatus": "pending",
-    "stats": {
-      "normal": {
-        "weight": "1,6 ton",
-        "speed": "40,5 km/h",
-        "biteForce": "35"
-      },
-      "primePeak": {
-        "weight": "1,83 ton",
-        "speed": "43,2 km/h",
-        "biteForce": "40,25"
-      }
-    },
-    "dataNote": "",
-    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
-  },
-  {
-    "name": "Triceratops",
-    "diet": "herbivore",
-    "growth": "29 sa. 10 dk.",
-    "difficulty": "Çok Zor",
-    "tier": "Apex",
-    "ability": "Sparring ve güçlü boynuz saldırıları.",
-    "highlight": "Oyundaki en dayanıklı otçullardan biri",
-    "image": "assets/dinos/triceratops.webp",
-    "imageStatus": "pending",
-    "stats": {
-      "normal": {
-        "weight": "9,5 ton",
-        "speed": "23,4 km/h",
-        "biteForce": "900"
-      },
-      "primePeak": {
-        "weight": "12,5 ton",
-        "speed": "25,1 km/h",
-        "biteForce": "1035"
-      }
-    },
-    "dataNote": "Triceratops Bite Force için kaynak özet ve detay growth tablolarında farklı değerler bulunuyor; burada detay growth eğrisi kullanıldı.",
-    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
-  },
-  {
     "name": "Allosaurus",
     "diet": "carnivore",
     "growth": "10 sa.",
@@ -240,39 +15,40 @@ window.DINOS=[
         "speed": "39,8 km/h",
         "biteForce": "175"
       },
-      "primePeak": {
+      "prime": {
         "weight": "3,7 ton",
-        "speed": "39 km/h",
-        "biteForce": "201"
+        "speed": "39,1 km/h",
+        "biteForce": "201,26"
       }
     },
-    "dataNote": "",
-    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
+    "dataNote": "Prime değerleri The Dino Den oyun içi profil ekranından doğrulandı.",
+    "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",
+    "primeLabel": "Prime Peak • %87,5"
   },
   {
-    "name": "Tyrannosaurus",
+    "name": "Austroraptor",
     "diet": "carnivore",
-    "growth": "35 sa. 33 dk.",
-    "difficulty": "Zor",
-    "tier": "Apex",
-    "ability": "Crush ve Sparring saldırıları ile rakiplerini etkisiz hale getirebilir.",
-    "highlight": "Oyundaki en güçlü ısırıklardan biri",
-    "image": "assets/dinos/tyrannosaurus.webp",
-    "imageStatus": "pending",
+    "growth": "Doğrulanmadı",
+    "difficulty": "Doğrulanmadı",
+    "tier": "Doğrulanmadı",
+    "ability": "Türün mekanik/yetenek açıklaması daha sonra doğrulanacak.",
+    "highlight": "DinoDen verileriyle yeni eklenen oynanabilir tür",
+    "image": "assets/dinos/austroraptor.webp",
     "stats": {
       "normal": {
-        "weight": "9,3 ton",
-        "speed": "29 km/h",
-        "biteForce": "699"
+        "weight": "240 kg",
+        "speed": "47,2 km/h",
+        "biteForce": "40"
       },
-      "primePeak": {
-        "weight": "12,3 ton",
-        "speed": "33,7 km/h",
-        "biteForce": "770"
+      "prime": {
+        "weight": "350 kg",
+        "speed": "55,9 km/h",
+        "biteForce": "46"
       }
     },
-    "dataNote": "",
-    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
+    "dataNote": "Normal ve Prime değerleri The Dino Den oyun içi profilinden doğrulandı.",
+    "source": "The Dino Den • oyun içi profil verisi",
+    "primeLabel": "Prime Peak • %87,5"
   },
   {
     "name": "Carnotaurus",
@@ -290,14 +66,15 @@ window.DINOS=[
         "speed": "49,5 km/h",
         "biteForce": "150"
       },
-      "primePeak": {
+      "prime": {
         "weight": "1,8 ton",
         "speed": "55,6 km/h",
-        "biteForce": "172,5"
+        "biteForce": "172,52"
       }
     },
-    "dataNote": "",
-    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
+    "dataNote": "Prime değerleri The Dino Den oyun içi profil ekranından doğrulandı.",
+    "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",
+    "primeLabel": "Prime Peak • %87,5"
   },
   {
     "name": "Ceratosaurus",
@@ -315,14 +92,15 @@ window.DINOS=[
         "speed": "40,3 km/h",
         "biteForce": "150"
       },
-      "primePeak": {
+      "prime": {
         "weight": "1,95 ton",
         "speed": "39,7 km/h",
-        "biteForce": "172,5"
+        "biteForce": "172,52"
       }
     },
-    "dataNote": "",
-    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
+    "dataNote": "Prime değerleri The Dino Den oyun içi profil ekranından doğrulandı.",
+    "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",
+    "primeLabel": "Prime Peak • %87,5"
   },
   {
     "name": "Deinosuchus",
@@ -340,14 +118,15 @@ window.DINOS=[
         "speed": "18 km/h",
         "biteForce": "500"
       },
-      "primePeak": {
-        "weight": "10,7 ton",
-        "speed": "19,7 km/h",
-        "biteForce": "575"
+      "prime": {
+        "weight": "13,5 ton",
+        "speed": "21,4 km/h",
+        "biteForce": "550"
       }
     },
-    "dataNote": "",
-    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
+    "dataNote": "DinoDen ekranındaki bu Prime değerleri %100 Prime formuna aittir; diğer türlerin çoğundaki %87,5 Prime Peak ile aynı aşama değildir.",
+    "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",
+    "primeLabel": "Prime • %100"
   },
   {
     "name": "Dilophosaurus",
@@ -365,14 +144,15 @@ window.DINOS=[
         "speed": "47,5 km/h",
         "biteForce": "85"
       },
-      "primePeak": {
-        "weight": "977 kg",
+      "prime": {
+        "weight": "977,26 kg",
         "speed": "52,3 km/h",
-        "biteForce": "97,75"
+        "biteForce": "97,73"
       }
     },
-    "dataNote": "",
-    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
+    "dataNote": "Prime değerleri The Dino Den oyun içi profil ekranından doğrulandı.",
+    "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",
+    "primeLabel": "Prime Peak • %87,5"
   },
   {
     "name": "Herrerasaurus",
@@ -390,14 +170,15 @@ window.DINOS=[
         "speed": "45 km/h",
         "biteForce": "30"
       },
-      "primePeak": {
+      "prime": {
         "weight": "225 kg",
         "speed": "46,8 km/h",
         "biteForce": "34,5"
       }
     },
-    "dataNote": "",
-    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
+    "dataNote": "Prime değerleri The Dino Den oyun içi profil ekranından doğrulandı.",
+    "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",
+    "primeLabel": "Prime Peak • %87,5"
   },
   {
     "name": "Omniraptor",
@@ -415,14 +196,15 @@ window.DINOS=[
         "speed": "46,8 km/h",
         "biteForce": "65"
       },
-      "primePeak": {
+      "prime": {
         "weight": "660 kg",
         "speed": "52,3 km/h",
-        "biteForce": "75,75"
+        "biteForce": "74,76"
       }
     },
-    "dataNote": "",
-    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
+    "dataNote": "Prime değerleri The Dino Den oyun içi profil ekranından doğrulandı.",
+    "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",
+    "primeLabel": "Prime Peak • %87,5"
   },
   {
     "name": "Pteranodon",
@@ -440,14 +222,15 @@ window.DINOS=[
         "speed": "37,8 km/h",
         "biteForce": "20"
       },
-      "primePeak": {
+      "prime": {
         "weight": "120 kg",
         "speed": "39,4 km/h",
-        "biteForce": "23"
+        "biteForce": "22,99"
       }
     },
-    "dataNote": "",
-    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
+    "dataNote": "Prime değerleri The Dino Den oyun içi profil ekranından doğrulandı.",
+    "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",
+    "primeLabel": "Prime Peak • %87,5"
   },
   {
     "name": "Troodon",
@@ -465,14 +248,275 @@ window.DINOS=[
         "speed": "45 km/h",
         "biteForce": "15"
       },
-      "primePeak": {
-        "weight": "79,8 kg",
+      "prime": {
+        "weight": "80 kg",
         "speed": "52,2 km/h",
-        "biteForce": "17,25"
+        "biteForce": "17,23"
       }
     },
-    "dataNote": "",
-    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
+    "dataNote": "Prime değerleri The Dino Den oyun içi profil ekranından doğrulandı.",
+    "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",
+    "primeLabel": "Prime Peak • %87,5"
+  },
+  {
+    "name": "Tyrannosaurus",
+    "diet": "carnivore",
+    "growth": "35 sa. 33 dk.",
+    "difficulty": "Zor",
+    "tier": "Apex",
+    "ability": "Crush ve Sparring saldırıları ile rakiplerini etkisiz hale getirebilir.",
+    "highlight": "Oyundaki en güçlü ısırıklardan biri",
+    "image": "assets/dinos/tyrannosaurus.webp",
+    "imageStatus": "pending",
+    "stats": {
+      "normal": {
+        "weight": "9,3 ton",
+        "speed": "29 km/h",
+        "biteForce": "699"
+      },
+      "prime": {
+        "weight": "12,3 ton",
+        "speed": "33,7 km/h",
+        "biteForce": "769,97"
+      }
+    },
+    "dataNote": "Prime değerleri The Dino Den oyun içi profil ekranından doğrulandı.",
+    "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",
+    "primeLabel": "Prime Peak • %87,5"
+  },
+  {
+    "name": "Diabloceratops",
+    "diet": "herbivore",
+    "growth": "7 sa. 45 dk.",
+    "difficulty": "Orta",
+    "tier": "Orta Seviye",
+    "ability": "Sparring ile rakiplerini itebilir ve dengesini bozabilir.",
+    "highlight": "Güçlü kafa zırhı",
+    "image": "assets/dinos/diabloceratops.webp",
+    "imageStatus": "pending",
+    "stats": {
+      "normal": {
+        "weight": "3 ton",
+        "speed": "36 km/h",
+        "biteForce": "275"
+      },
+      "prime": {
+        "weight": "3,9 ton",
+        "speed": "37,8 km/h",
+        "biteForce": "316,26"
+      }
+    },
+    "dataNote": "Prime değerleri The Dino Den oyun içi profil ekranından doğrulandı.",
+    "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",
+    "primeLabel": "Prime Peak • %87,5"
+  },
+  {
+    "name": "Dryosaurus",
+    "diet": "herbivore",
+    "growth": "4 sa. 25 dk.",
+    "difficulty": "Kolay",
+    "tier": "Alt Seviye",
+    "ability": "Hızlı yana sıçrayarak saldırılardan kaçabilir.",
+    "highlight": "Yüksek hareket kabiliyeti",
+    "image": "assets/dinos/dryosaurus.webp",
+    "imageStatus": "pending",
+    "stats": {
+      "normal": {
+        "weight": "130 kg",
+        "speed": "45 km/h",
+        "biteForce": "20"
+      },
+      "prime": {
+        "weight": "185 kg",
+        "speed": "50,4 km/h",
+        "biteForce": "23"
+      }
+    },
+    "dataNote": "Prime değerleri The Dino Den oyun içi profil ekranından doğrulandı.",
+    "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",
+    "primeLabel": "Prime Peak • %87,5"
+  },
+  {
+    "name": "Hypsilophodon",
+    "diet": "herbivore",
+    "growth": "1 sa. 50 dk.",
+    "difficulty": "Kolay",
+    "tier": "Alt Seviye",
+    "ability": "Kusarak rakiplerini geçici olarak kör eder.",
+    "highlight": "Kayalara ve eğimli yüzeylere tırmanabilir",
+    "image": "assets/dinos/hypsilophodon.webp",
+    "imageStatus": "pending",
+    "stats": {
+      "normal": {
+        "weight": "20 kg",
+        "speed": "39,6 km/h",
+        "biteForce": "2"
+      },
+      "prime": {
+        "weight": "22,6 kg",
+        "speed": "39,6 km/h",
+        "biteForce": "2,3"
+      }
+    },
+    "dataNote": "Prime değerleri The Dino Den oyun içi profil ekranından doğrulandı.",
+    "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",
+    "primeLabel": "Prime Peak • %87,5"
+  },
+  {
+    "name": "Kentrosaurus",
+    "diet": "herbivore",
+    "growth": "11 sa. 5 dk.",
+    "difficulty": "Orta",
+    "tier": "Orta Seviye",
+    "ability": "Güçlü kuyruk saldırısı, Savunma Duruşu ve dikenlerden yansıma hasarı.",
+    "highlight": "Yakın dövüşte çok yüksek savunma",
+    "image": "assets/dinos/kentrosaurus.webp",
+    "imageStatus": "pending",
+    "stats": {
+      "normal": {
+        "weight": "1,95 ton",
+        "speed": "39,6 km/h",
+        "biteForce": "30"
+      },
+      "prime": {
+        "weight": "2,2 ton",
+        "speed": "39,6 km/h",
+        "biteForce": "34,5"
+      }
+    },
+    "dataNote": "Prime değerleri The Dino Den oyun içi profil ekranından doğrulandı.",
+    "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",
+    "primeLabel": "Prime Peak • %87,5"
+  },
+  {
+    "name": "Maiasaura",
+    "diet": "herbivore",
+    "growth": "7 sa.",
+    "difficulty": "Kolay",
+    "tier": "Orta Seviye",
+    "ability": "Güçlü tekme ve sürü desteği.",
+    "highlight": "Yavruları korumada oldukça başarılı",
+    "image": "assets/dinos/maiasaura.webp",
+    "imageStatus": "pending",
+    "stats": {
+      "normal": {
+        "weight": "3,7 ton",
+        "speed": "42,3 km/h",
+        "biteForce": "50"
+      },
+      "prime": {
+        "weight": "5,4 ton",
+        "speed": "30,8 km/h",
+        "biteForce": "57,5"
+      }
+    },
+    "dataNote": "Prime değerleri The Dino Den oyun içi profil ekranından doğrulandı.",
+    "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",
+    "primeLabel": "Prime Peak • %87,5"
+  },
+  {
+    "name": "Pachycephalosaurus",
+    "diet": "herbivore",
+    "growth": "6 sa. 15 dk.",
+    "difficulty": "Zor",
+    "tier": "Orta Seviye",
+    "ability": "Şarjlı kafa darbesi ile kemik kırabilir.",
+    "highlight": "Kırık oluşturma",
+    "image": "assets/dinos/pachycephalosaurus.webp",
+    "imageStatus": "pending",
+    "stats": {
+      "normal": {
+        "weight": "700 kg",
+        "speed": "41,8 km/h",
+        "biteForce": "30"
+      },
+      "prime": {
+        "weight": "910 kg",
+        "speed": "46,6 km/h",
+        "biteForce": "34,5"
+      }
+    },
+    "dataNote": "Pachy ağırlığında kaynak özet tablosu ile detay growth tablosu arasında fark var; burada detay growth tablosu kullanıldı.",
+    "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",
+    "primeLabel": "Prime Peak • %87,5"
+  },
+  {
+    "name": "Stegosaurus",
+    "diet": "herbivore",
+    "growth": "17 sa. 55 dk.",
+    "difficulty": "Orta",
+    "tier": "Apex",
+    "ability": "Güçlü kuyruk saldırıları.",
+    "highlight": "Oyundaki en yüksek hasarlardan biri",
+    "image": "assets/dinos/stegosaurus.webp",
+    "imageStatus": "pending",
+    "stats": {
+      "normal": {
+        "weight": "6 ton",
+        "speed": "26,2 km/h",
+        "biteForce": "50"
+      },
+      "prime": {
+        "weight": "9,3 ton",
+        "speed": "30,6 km/h",
+        "biteForce": "57,5"
+      }
+    },
+    "dataNote": "Prime değerleri The Dino Den oyun içi profil ekranından doğrulandı.",
+    "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",
+    "primeLabel": "Prime Peak • %87,5"
+  },
+  {
+    "name": "Tenontosaurus",
+    "diet": "herbivore",
+    "growth": "5 sa. 40 dk.",
+    "difficulty": "Çok Zor",
+    "tier": "Orta Seviye",
+    "ability": "Kuyruk saldırısı ile rakiplerini yere düşürebilir.",
+    "highlight": "Çok yönlü savaşçı",
+    "image": "assets/dinos/tenontosaurus.webp",
+    "imageStatus": "pending",
+    "stats": {
+      "normal": {
+        "weight": "1,6 ton",
+        "speed": "40,5 km/h",
+        "biteForce": "35"
+      },
+      "prime": {
+        "weight": "1.829 kg",
+        "speed": "43,2 km/h",
+        "biteForce": "40,24"
+      }
+    },
+    "dataNote": "Prime değerleri The Dino Den oyun içi profil ekranından doğrulandı.",
+    "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",
+    "primeLabel": "Prime Peak • %87,5"
+  },
+  {
+    "name": "Triceratops",
+    "diet": "herbivore",
+    "growth": "29 sa. 10 dk.",
+    "difficulty": "Çok Zor",
+    "tier": "Apex",
+    "ability": "Sparring ve güçlü boynuz saldırıları.",
+    "highlight": "Oyundaki en dayanıklı otçullardan biri",
+    "image": "assets/dinos/triceratops.webp",
+    "imageStatus": "pending",
+    "stats": {
+      "normal": {
+        "weight": "9,5 ton",
+        "speed": "23,4 km/h",
+        "biteForce": "900"
+      },
+      "prime": {
+        "weight": "12,5 ton",
+        "speed": "24,1 km/h",
+        "biteForce": "1028"
+      }
+    },
+    "dataNote": "Bu değerler %92 growth formuna aittir. Bu aşamada Triceratops’un kafası daha büyük göründüğü için pratikte temas/hitbox avantajı sağlayabilir.",
+    "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",
+    "primeLabel": "Prime • %92"
   },
   {
     "name": "Beipiaosaurus",
@@ -490,14 +534,15 @@ window.DINOS=[
         "speed": "32 km/h",
         "biteForce": "20"
       },
-      "primePeak": {
+      "prime": {
         "weight": "90 kg",
-        "speed": "32,9 km/h",
+        "speed": "32,8 km/h",
         "biteForce": "23"
       }
     },
-    "dataNote": "",
-    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
+    "dataNote": "Prime değerleri The Dino Den oyun içi profil ekranından doğrulandı.",
+    "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",
+    "primeLabel": "Prime Peak • %87,5"
   },
   {
     "name": "Gallimimus",
@@ -515,14 +560,15 @@ window.DINOS=[
         "speed": "45,6 km/h",
         "biteForce": "25"
       },
-      "primePeak": {
+      "prime": {
         "weight": "560 kg",
-        "speed": "54 km/h",
+        "speed": "56,9 km/h",
         "biteForce": "28,75"
       }
     },
-    "dataNote": "",
-    "source": "Evrima Quick Guide — Adult + Prime Peak (87,5%)"
+    "dataNote": "Prime değerleri The Dino Den oyun içi profil ekranından doğrulandı.",
+    "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",
+    "primeLabel": "Prime Peak • %87,5"
   }
 ];
 
