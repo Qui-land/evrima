@@ -1,22 +1,17 @@
-# QUI Evrima Database v0.5.1
+# QUI Evrima Database v0.5.2
 
-Bu sürümde:
+Bu düzeltme sürümünde:
 
-- Ana sayfa hero bölümü sinematik orman arka planıyla güncellendi.
-- Hero alanındaki sağ panel, Normal / Prime bilgisini daha net gösterecek şekilde yeniden işlendi.
-- Dinozor bölümündeki arama ve filtre alanı yenilendi:
-  - Dinozor ara kutusu
-  - Tüm sınıflar filtresi
-  - A-Z sıralama seçeneği
-- Kategori kartlarındaki dinozor sayıları artık veri listesinden otomatik hesaplanıyor.
-- v0.5 içindeki mevcut dinozor, prime ve kategori görselleri korunarak yeni düzene uyarlandı.
+- Hero alanı tamamen yeniden düzenlendi ve sinematik T-Rex / jungle arka planı doğrudan siteye bağlandı.
+- Normal / Prime kutusu hero görselinden kaldırıldı; ana sayfa artık referans tasarımdaki gibi metin solda, büyük dinozor sağda çalışıyor.
+- Kategori kartları yeniden yapıldı:
+  - Carnivore: Tyrannosaurus
+  - Herbivore: Triceratops
+  - Omnivore: Gallimimus
+  - Mutations: DNA görseli
+- Kategori görsellerinde dinozorun kafa ve gövdesi görünür halde tutuldu.
+- Dinozor ara, Tüm Sınıflar ve A-Z filtre sistemi korunuyor.
+- Kategori sayıları DINOS verisinden otomatik hesaplanıyor.
 
-## Kurulum
-
-1. Dosyaları GitHub repona yükle.
-2. `Settings > Pages` içinde branch olarak `main`, klasör olarak `/(root)` seç.
-3. Birkaç dakika sonra siten yayına girer.
-
-## Not
-
-Hero arka plan dosyası: `assets/hero/hero-background.png`
+## GitHub'a yükleme
+ZIP'i çıkar ve içindeki dosyaların tamamını repo köküne yükle. Özellikle `assets/hero`, `assets/categories` ve `assets/dinos` klasörlerinin de yüklendiğinden emin ol.
