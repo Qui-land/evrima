@@ -36,3 +36,48 @@ Paket içindeki local asset path'leri kontrol edildi:
 ZIP'i çıkar ve klasörün **içindeki** `index.html`, `style.css`, `script.js`, `data.js`, `README.md` ve `assets` klasörünü repo köküne yükle.
 
 Eski repo kökünde ayrıca `hero/`, `categories/`, `dinos/` gibi duplicate klasörler varsa bu sürüm onları kullanmaz; doğru yollar yalnızca `assets/...` altındadır.
+
+## v0.5.4 — Combat Guide sistemi
+
+Mevcut dinozor detay modalı korunarak ikinci bir `Combat Guide / Savaş Rehberi` paneli eklendi.
+
+- Dinozor adının yanında `⚔ COMBAT GUIDE` butonu bulunur.
+- Masaüstünde rehber paneli mevcut dossier'in sağında açılır.
+- Küçük ekranlarda rehber aynı modalın üzerinde responsive overlay olarak açılır.
+- Combat Guide kapatıldığında dinozor detay penceresi açık kalır.
+- Normal / Prime stat sistemi bağımsız şekilde çalışmaya devam eder.
+- Prime modu değiştiğinde, ileride moda özel rehber girilmişse Combat Guide içeriği de uygun varyanta geçebilir.
+- Rehber hazır değilse `FIELD NOTES UNAVAILABLE` mesajı gösterilir.
+
+### Dinozor combatGuide veri şablonu
+
+Her dinozorun kendi `combatGuide` nesnesi vardır:
+
+```js
+combatGuide: {
+  status: "ready", // hazır değilse "pending"
+  contributors: [
+    { name: "Raven", role: "Allosaurus Main" },
+    { name: "Qui", role: "Contributor" }
+  ],
+  shared: {
+    playstyle: "Genel oynanış tarzı...",
+    combatBasics: "Stamina, pozisyon ve zamanlama notları...",
+    techniques: [
+      { name: "Teknik adı", description: "Nasıl uygulanır..." }
+    ],
+    matchups: [
+      { opponent: "Ceratosaurus", strategy: "Bu eşleşmede..." },
+      { opponent: "Diabloceratops", strategy: "Bu eşleşmede..." }
+    ],
+    mistakes: [
+      "Gereksiz stamina harcamak",
+      "Rakibin dönüş açısını küçümsemek"
+    ]
+  },
+  normal: null,
+  prime: null
+}
+```
+
+`shared` ortak rehberdir. İleride Normal veya Prime oynanışı farklıysa `normal` ya da `prime` alanına aynı içerik yapısında ayrı rehber eklenebilir. Sistem önce moda özel rehberi, yoksa `shared` rehberi kullanır.

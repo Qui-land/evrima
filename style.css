@@ -312,3 +312,152 @@ footer{max-width:1460px;margin:auto;padding:28px 22px 44px;border-top:1px solid 
     background-position: 68% top;
   }
 }
+
+/* v0.5.4 — Combat Guide / Field Notes extension */
+dialog{
+  max-height:calc(100vh - 30px);
+  overflow:hidden;
+  transition:width .24s ease;
+}
+dialog.combat-open{width:min(1380px,calc(100vw - 30px))}
+#modalInner{min-width:0}
+.dossier-shell{display:block;min-width:0}
+.dossier-shell.combat-open{display:grid;grid-template-columns:minmax(0,900px) minmax(360px,1fr);align-items:stretch}
+.dossier-shell.combat-open .dossier{min-width:0}
+
+.dossier-title-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:5px}
+.dossier-title-row h3{margin:0;min-width:0}
+.combat-guide-trigger{
+  margin-top:4px;
+  border:1px solid #4a3158;
+  border-radius:7px;
+  background:#100c15;
+  color:#caa7da;
+  padding:8px 11px;
+  font:800 10px "Barlow Condensed",sans-serif;
+  letter-spacing:.8px;
+  white-space:nowrap;
+  cursor:pointer;
+  transition:border-color .18s ease,background .18s ease,color .18s ease,box-shadow .18s ease,transform .18s ease;
+}
+.combat-guide-trigger span{color:#c66cff;margin-right:4px}
+.combat-guide-trigger:hover,.combat-guide-trigger.active{
+  color:#fff;
+  border-color:#8f4abd;
+  background:#21102b;
+  box-shadow:0 8px 25px rgba(118,45,159,.22);
+}
+.combat-guide-trigger:active{transform:translateY(1px)}
+
+.combat-guide-panel{
+  display:none;
+  min-width:0;
+  border-left:1px solid #3d2949;
+  background:
+    linear-gradient(180deg,rgba(168,85,247,.035),transparent 16%),
+    linear-gradient(145deg,#0d0a12,#08070b);
+  color:#f7f3fb;
+  max-height:calc(100vh - 30px);
+  overflow:auto;
+  scrollbar-width:thin;
+  scrollbar-color:#6e3a87 #0b0910;
+}
+.dossier-shell.combat-open .combat-guide-panel{display:block;animation:combatPanelIn .24s ease both}
+@keyframes combatPanelIn{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:translateX(0)}}
+
+.combat-panel-head{
+  position:sticky;
+  top:0;
+  z-index:3;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  padding:24px 24px 18px;
+  border-bottom:1px solid #2c2034;
+  background:rgba(11,8,15,.94);
+  backdrop-filter:blur(12px);
+}
+.combat-panel-head span,.combat-panel-head b{display:block}
+.combat-panel-head span{font:700 9px "Barlow Condensed",sans-serif;letter-spacing:2.2px;color:#775f83}
+.combat-panel-head b{margin-top:5px;font:800 27px "Barlow Condensed",sans-serif;letter-spacing:.8px;color:#d8c8df}
+.combat-panel-close{
+  flex:0 0 auto;
+  width:32px;height:32px;
+  display:grid;place-items:center;
+  border:1px solid #473351;
+  border-radius:50%;
+  background:#130e18;
+  color:#d6c9dd;
+  font-size:19px;
+  cursor:pointer;
+}
+.combat-panel-close:hover{border-color:#8b4caf;color:#fff;background:#21102a}
+#combatGuideBody{padding:22px 24px 28px}
+.combat-guide-scroll{display:block}
+.combat-guide-meta{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px;padding-bottom:11px;border-bottom:1px solid #271d2e}
+.combat-guide-meta span{font:800 15px "Barlow Condensed",sans-serif;letter-spacing:.7px;text-transform:uppercase;color:#b86ee0}
+.combat-guide-meta b{font:800 9px "Barlow Condensed",sans-serif;letter-spacing:1px;color:#817389;text-transform:uppercase}
+
+.combat-section{padding:0 0 20px;margin:0 0 20px;border-bottom:1px solid #251c2b}
+.combat-section:last-of-type{margin-bottom:16px}
+.combat-section-title{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:9px}
+.combat-section-title span{font:800 15px "Barlow Condensed",sans-serif;letter-spacing:.9px;color:#c66cff}
+.combat-section-title b{font:700 9px "Barlow Condensed",sans-serif;letter-spacing:.8px;color:#776c7e}
+.combat-section>p{margin:0;color:#b6abbc;font-size:12px;line-height:1.72}
+
+.combat-techniques{display:grid;gap:7px}
+.combat-technique{padding:10px 11px;border:1px solid #2e2335;border-radius:7px;background:#100d14;color:#b8aebe;font-size:11px;line-height:1.55}
+.combat-technique>b{display:block;margin-bottom:4px;font:800 13px "Barlow Condensed",sans-serif;color:#d9cee0}
+.combat-technique>p{margin:0;color:#a99faf;font-size:11px;line-height:1.55}
+
+.combat-matchups{display:grid;gap:7px}
+.combat-matchup{border:1px solid #2d2234;border-radius:7px;background:#0f0c13;overflow:hidden}
+.combat-matchup summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 12px;cursor:pointer;color:#d4c8dc;font:800 12px "Barlow Condensed",sans-serif;letter-spacing:.55px}
+.combat-matchup summary::-webkit-details-marker{display:none}
+.combat-matchup summary i{font-style:normal;color:#b660e0;font-size:15px;transition:transform .18s ease}
+.combat-matchup[open] summary i{transform:rotate(45deg)}
+.combat-matchup p{margin:0;padding:0 12px 12px;color:#a99fae;font-size:11px;line-height:1.65}
+
+.combat-mistakes{margin:0;padding:0;list-style:none;display:grid;gap:7px}
+.combat-mistakes li{position:relative;padding:9px 10px 9px 25px;border:1px solid #2d2234;border-radius:7px;background:#100d14;color:#b5abb9;font-size:11px;line-height:1.55}
+.combat-mistakes li:before{content:"×";position:absolute;left:9px;top:8px;color:#c561de;font-weight:800}
+
+.combat-contributor{margin-top:20px;padding:16px 17px;border:1px solid #493056;border-radius:9px;background:linear-gradient(135deg,#150d1c,#0d0a11);box-shadow:inset 3px 0 0 #8f49b7}
+.combat-contributor span,.combat-contributor small,.combat-contributor strong,.combat-contributor em{display:block}
+.combat-contributor span{font:800 9px "Barlow Condensed",sans-serif;letter-spacing:2px;color:#795c86}
+.combat-contributor small{margin-top:8px;color:#9d90a4;font-size:10px}
+.combat-contributor strong{margin-top:4px;font:800 20px "Barlow Condensed",sans-serif;letter-spacing:.9px;color:#d9cbe0}
+.combat-contributor em{margin-top:4px;font-style:normal;font-size:9px;color:#866f91}
+
+.combat-unavailable{min-height:310px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:18px 4px}
+.combat-unavailable span{font:800 10px "Barlow Condensed",sans-serif;letter-spacing:2.3px;color:#755a81}
+.combat-unavailable b{margin-top:11px;font:800 26px "Barlow Condensed",sans-serif;color:#d8cadf}
+.combat-unavailable p{margin:8px 0 0;max-width:300px;color:#9e93a6;font-size:12px;line-height:1.65}
+
+@media(max-width:1100px){
+  dialog.combat-open{width:min(900px,calc(100vw - 30px))}
+  .dossier-shell.combat-open{display:block;position:relative}
+  .dossier-shell.combat-open .combat-guide-panel{
+    position:absolute;
+    inset:0;
+    z-index:8;
+    border-left:0;
+    max-height:none;
+    min-height:100%;
+    background:linear-gradient(145deg,#0d0a12,#08070b);
+  }
+}
+@media(max-width:820px){
+  .dossier-title-row{align-items:flex-start;flex-direction:column;gap:8px}
+  .combat-guide-trigger{margin-top:0}
+  .combat-panel-head{padding:19px 18px 15px}
+  #combatGuideBody{padding:18px}
+}
+@media(max-width:560px){
+  dialog{width:calc(100vw - 12px);max-height:calc(100dvh - 12px)}
+  dialog.combat-open{width:calc(100vw - 12px)}
+  .dossier-shell.combat-open .combat-guide-panel{min-height:100%;max-height:calc(100dvh - 12px)}
+  .combat-panel-head b{font-size:24px}
+  #combatGuideBody{padding:16px}
+}

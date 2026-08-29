@@ -21,6 +21,19 @@ window.DINOS=[
         "biteForce": "201,26"
       }
     },
+    "combatGuide": {
+      "status": "pending",
+      "contributors": [],
+      "shared": {
+        "playstyle": "",
+        "combatBasics": "",
+        "techniques": [],
+        "matchups": [],
+        "mistakes": []
+      },
+      "normal": null,
+      "prime": null
+    },
     "dataNote": "Prime değerleri The Dino Den oyun içi profil ekranından doğrulandı.",
     "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",
     "primeLabel": "Prime Peak • %87,5"
@@ -45,6 +58,19 @@ window.DINOS=[
         "speed": "55,9 km/h",
         "biteForce": "46"
       }
+    },
+    "combatGuide": {
+      "status": "pending",
+      "contributors": [],
+      "shared": {
+        "playstyle": "",
+        "combatBasics": "",
+        "techniques": [],
+        "matchups": [],
+        "mistakes": []
+      },
+      "normal": null,
+      "prime": null
     },
     "dataNote": "Normal ve Prime değerleri The Dino Den oyun içi profilinden doğrulandı.",
     "source": "The Dino Den • oyun içi profil verisi",
@@ -72,6 +98,19 @@ window.DINOS=[
         "biteForce": "172,52"
       }
     },
+    "combatGuide": {
+      "status": "pending",
+      "contributors": [],
+      "shared": {
+        "playstyle": "",
+        "combatBasics": "",
+        "techniques": [],
+        "matchups": [],
+        "mistakes": []
+      },
+      "normal": null,
+      "prime": null
+    },
     "dataNote": "Prime değerleri The Dino Den oyun içi profil ekranından doğrulandı.",
     "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",
     "primeLabel": "Prime Peak • %87,5"
@@ -97,6 +136,19 @@ window.DINOS=[
         "speed": "39,7 km/h",
         "biteForce": "172,52"
       }
+    },
+    "combatGuide": {
+      "status": "pending",
+      "contributors": [],
+      "shared": {
+        "playstyle": "",
+        "combatBasics": "",
+        "techniques": [],
+        "matchups": [],
+        "mistakes": []
+      },
+      "normal": null,
+      "prime": null
     },
     "dataNote": "Prime değerleri The Dino Den oyun içi profil ekranından doğrulandı.",
     "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",
@@ -124,6 +176,19 @@ window.DINOS=[
         "biteForce": "550"
       }
     },
+    "combatGuide": {
+      "status": "pending",
+      "contributors": [],
+      "shared": {
+        "playstyle": "",
+        "combatBasics": "",
+        "techniques": [],
+        "matchups": [],
+        "mistakes": []
+      },
+      "normal": null,
+      "prime": null
+    },
     "dataNote": "DinoDen ekranındaki bu Prime değerleri %100 Prime formuna aittir; diğer türlerin çoğundaki %87,5 Prime Peak ile aynı aşama değildir.",
     "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",
     "primeLabel": "Prime • %100"
@@ -149,6 +214,19 @@ window.DINOS=[
         "speed": "52,3 km/h",
         "biteForce": "97,73"
       }
+    },
+    "combatGuide": {
+      "status": "pending",
+      "contributors": [],
+      "shared": {
+        "playstyle": "",
+        "combatBasics": "",
+        "techniques": [],
+        "matchups": [],
+        "mistakes": []
+      },
+      "normal": null,
+      "prime": null
     },
     "dataNote": "Prime değerleri The Dino Den oyun içi profil ekranından doğrulandı.",
     "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",
@@ -176,6 +254,19 @@ window.DINOS=[
         "biteForce": "34,5"
       }
     },
+    "combatGuide": {
+      "status": "pending",
+      "contributors": [],
+      "shared": {
+        "playstyle": "",
+        "combatBasics": "",
+        "techniques": [],
+        "matchups": [],
+        "mistakes": []
+      },
+      "normal": null,
+      "prime": null
+    },
     "dataNote": "Prime değerleri The Dino Den oyun içi profil ekranından doğrulandı.",
     "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",
     "primeLabel": "Prime Peak • %87,5"
@@ -201,6 +292,19 @@ window.DINOS=[
         "speed": "52,3 km/h",
         "biteForce": "74,76"
       }
+    },
+    "combatGuide": {
+      "status": "pending",
+      "contributors": [],
+      "shared": {
+        "playstyle": "",
+        "combatBasics": "",
+        "techniques": [],
+        "matchups": [],
+        "mistakes": []
+      },
+      "normal": null,
+      "prime": null
     },
     "dataNote": "Prime değerleri The Dino Den oyun içi profil ekranından doğrulandı.",
     "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",
@@ -228,6 +332,19 @@ window.DINOS=[
         "biteForce": "22,99"
       }
     },
+    "combatGuide": {
+      "status": "pending",
+      "contributors": [],
+      "shared": {
+        "playstyle": "",
+        "combatBasics": "",
+        "techniques": [],
+        "matchups": [],
+        "mistakes": []
+      },
+      "normal": null,
+      "prime": null
+    },
     "dataNote": "Prime değerleri The Dino Den oyun içi profil ekranından doğrulandı.",
     "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",
     "primeLabel": "Prime Peak • %87,5"
@@ -253,6 +370,19 @@ window.DINOS=[
         "speed": "52,2 km/h",
         "biteForce": "17,23"
       }
+    },
+    "combatGuide": {
+      "status": "pending",
+      "contributors": [],
+      "shared": {
+        "playstyle": "",
+        "combatBasics": "",
+        "techniques": [],
+        "matchups": [],
+        "mistakes": []
+      },
+      "normal": null,
+      "prime": null
     },
     "dataNote": "Prime değerleri The Dino Den oyun içi profil ekranından doğrulandı.",
     "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",
@@ -280,6 +410,19 @@ window.DINOS=[
         "biteForce": "769,97"
       }
     },
+    "combatGuide": {
+      "status": "pending",
+      "contributors": [],
+      "shared": {
+        "playstyle": "",
+        "combatBasics": "",
+        "techniques": [],
+        "matchups": [],
+        "mistakes": []
+      },
+      "normal": null,
+      "prime": null
+    },
     "dataNote": "Prime değerleri The Dino Den oyun içi profil ekranından doğrulandı.",
     "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",
     "primeLabel": "Prime Peak • %87,5"
@@ -305,6 +448,19 @@ window.DINOS=[
         "speed": "37,8 km/h",
         "biteForce": "316,26"
       }
+    },
+    "combatGuide": {
+      "status": "pending",
+      "contributors": [],
+      "shared": {
+        "playstyle": "",
+        "combatBasics": "",
+        "techniques": [],
+        "matchups": [],
+        "mistakes": []
+      },
+      "normal": null,
+      "prime": null
     },
     "dataNote": "Prime değerleri The Dino Den oyun içi profil ekranından doğrulandı.",
     "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",
@@ -332,6 +488,19 @@ window.DINOS=[
         "biteForce": "23"
       }
     },
+    "combatGuide": {
+      "status": "pending",
+      "contributors": [],
+      "shared": {
+        "playstyle": "",
+        "combatBasics": "",
+        "techniques": [],
+        "matchups": [],
+        "mistakes": []
+      },
+      "normal": null,
+      "prime": null
+    },
     "dataNote": "Prime değerleri The Dino Den oyun içi profil ekranından doğrulandı.",
     "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",
     "primeLabel": "Prime Peak • %87,5"
@@ -357,6 +526,19 @@ window.DINOS=[
         "speed": "39,6 km/h",
         "biteForce": "2,3"
       }
+    },
+    "combatGuide": {
+      "status": "pending",
+      "contributors": [],
+      "shared": {
+        "playstyle": "",
+        "combatBasics": "",
+        "techniques": [],
+        "matchups": [],
+        "mistakes": []
+      },
+      "normal": null,
+      "prime": null
     },
     "dataNote": "Prime değerleri The Dino Den oyun içi profil ekranından doğrulandı.",
     "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",
@@ -384,6 +566,19 @@ window.DINOS=[
         "biteForce": "34,5"
       }
     },
+    "combatGuide": {
+      "status": "pending",
+      "contributors": [],
+      "shared": {
+        "playstyle": "",
+        "combatBasics": "",
+        "techniques": [],
+        "matchups": [],
+        "mistakes": []
+      },
+      "normal": null,
+      "prime": null
+    },
     "dataNote": "Prime değerleri The Dino Den oyun içi profil ekranından doğrulandı.",
     "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",
     "primeLabel": "Prime Peak • %87,5"
@@ -409,6 +604,19 @@ window.DINOS=[
         "speed": "30,8 km/h",
         "biteForce": "57,5"
       }
+    },
+    "combatGuide": {
+      "status": "pending",
+      "contributors": [],
+      "shared": {
+        "playstyle": "",
+        "combatBasics": "",
+        "techniques": [],
+        "matchups": [],
+        "mistakes": []
+      },
+      "normal": null,
+      "prime": null
     },
     "dataNote": "Prime değerleri The Dino Den oyun içi profil ekranından doğrulandı.",
     "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",
@@ -436,6 +644,19 @@ window.DINOS=[
         "biteForce": "34,5"
       }
     },
+    "combatGuide": {
+      "status": "pending",
+      "contributors": [],
+      "shared": {
+        "playstyle": "",
+        "combatBasics": "",
+        "techniques": [],
+        "matchups": [],
+        "mistakes": []
+      },
+      "normal": null,
+      "prime": null
+    },
     "dataNote": "Pachy ağırlığında kaynak özet tablosu ile detay growth tablosu arasında fark var; burada detay growth tablosu kullanıldı.",
     "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",
     "primeLabel": "Prime Peak • %87,5"
@@ -461,6 +682,19 @@ window.DINOS=[
         "speed": "30,6 km/h",
         "biteForce": "57,5"
       }
+    },
+    "combatGuide": {
+      "status": "pending",
+      "contributors": [],
+      "shared": {
+        "playstyle": "",
+        "combatBasics": "",
+        "techniques": [],
+        "matchups": [],
+        "mistakes": []
+      },
+      "normal": null,
+      "prime": null
     },
     "dataNote": "Prime değerleri The Dino Den oyun içi profil ekranından doğrulandı.",
     "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",
@@ -488,6 +722,19 @@ window.DINOS=[
         "biteForce": "40,24"
       }
     },
+    "combatGuide": {
+      "status": "pending",
+      "contributors": [],
+      "shared": {
+        "playstyle": "",
+        "combatBasics": "",
+        "techniques": [],
+        "matchups": [],
+        "mistakes": []
+      },
+      "normal": null,
+      "prime": null
+    },
     "dataNote": "Prime değerleri The Dino Den oyun içi profil ekranından doğrulandı.",
     "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",
     "primeLabel": "Prime Peak • %87,5"
@@ -513,6 +760,19 @@ window.DINOS=[
         "speed": "24,1 km/h",
         "biteForce": "1028"
       }
+    },
+    "combatGuide": {
+      "status": "pending",
+      "contributors": [],
+      "shared": {
+        "playstyle": "",
+        "combatBasics": "",
+        "techniques": [],
+        "matchups": [],
+        "mistakes": []
+      },
+      "normal": null,
+      "prime": null
     },
     "dataNote": "Bu değerler %92 growth formuna aittir. Bu aşamada Triceratops’un kafası daha büyük göründüğü için pratikte temas/hitbox avantajı sağlayabilir.",
     "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",
@@ -540,6 +800,19 @@ window.DINOS=[
         "biteForce": "23"
       }
     },
+    "combatGuide": {
+      "status": "pending",
+      "contributors": [],
+      "shared": {
+        "playstyle": "",
+        "combatBasics": "",
+        "techniques": [],
+        "matchups": [],
+        "mistakes": []
+      },
+      "normal": null,
+      "prime": null
+    },
     "dataNote": "Prime değerleri The Dino Den oyun içi profil ekranından doğrulandı.",
     "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",
     "primeLabel": "Prime Peak • %87,5"
@@ -565,6 +838,19 @@ window.DINOS=[
         "speed": "56,9 km/h",
         "biteForce": "28,75"
       }
+    },
+    "combatGuide": {
+      "status": "pending",
+      "contributors": [],
+      "shared": {
+        "playstyle": "",
+        "combatBasics": "",
+        "techniques": [],
+        "matchups": [],
+        "mistakes": []
+      },
+      "normal": null,
+      "prime": null
     },
     "dataNote": "Prime değerleri The Dino Den oyun içi profil ekranından doğrulandı.",
     "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",

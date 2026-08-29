@@ -108,38 +108,168 @@ function statsHtml(d, mode) {
     </div>`;
 }
 
+function guideText(value) {
+  return esc(value || "").replace(/\n/g, "<br>");
+}
+
+function hasGuideContent(content) {
+  if (!content) return false;
+  return Boolean(
+    content.playstyle ||
+    content.combatBasics ||
+    (content.techniques && content.techniques.length) ||
+    (content.matchups && content.matchups.length) ||
+    (content.mistakes && content.mistakes.length)
+  );
+}
+
+function resolveCombatGuide(d, mode) {
+  const guide = d.combatGuide;
+  if (!guide || guide.status !== "ready") return { guide, content: null, scope: "pending" };
+
+  if (hasGuideContent(guide[mode])) {
+    return { guide, content: guide[mode], scope: mode };
+  }
+  if (hasGuideContent(guide.shared)) {
+    return { guide, content: guide.shared, scope: "shared" };
+  }
+  return { guide, content: null, scope: "pending" };
+}
+
+function techniqueHtml(items = []) {
+  if (!items.length) return "";
+  return `<section class="combat-section"><div class="combat-section-title"><span>TECHNIQUES</span><b>TEKNİKLER</b></div><div class="combat-techniques">${items.map((item) => {
+    if (typeof item === "string") return `<div class="combat-technique">${guideText(item)}</div>`;
+    const title = item.name || item.title || "Teknik";
+    const body = item.description || item.text || item.notes || "";
+    return `<div class="combat-technique"><b>${guideText(title)}</b>${body ? `<p>${guideText(body)}</p>` : ""}</div>`;
+  }).join("")}</div></section>`;
+}
+
+function matchupHtml(items = []) {
+  if (!items.length) return "";
+  return `<section class="combat-section"><div class="combat-section-title"><span>MATCHUPS</span><b>EŞLEŞMELER</b></div><div class="combat-matchups">${items.map((item) => {
+    if (typeof item === "string") {
+      return `<details class="combat-matchup"><summary><span>${guideText(item)}</span><i>+</i></summary><p>Bu eşleşmenin notları henüz eklenmedi.</p></details>`;
+    }
+    const opponent = item.opponent || item.name || item.title || "Rakip";
+    const body = item.strategy || item.guide || item.text || item.notes || "";
+    return `<details class="combat-matchup"><summary><span>VS ${guideText(opponent)}</span><i>+</i></summary><p>${body ? guideText(body) : "Bu eşleşmenin notları henüz eklenmedi."}</p></details>`;
+  }).join("")}</div></section>`;
+}
+
+function mistakesHtml(items = []) {
+  if (!items.length) return "";
+  return `<section class="combat-section"><div class="combat-section-title"><span>COMMON MISTAKES</span><b>YAYGIN HATALAR</b></div><ul class="combat-mistakes">${items.map((item) => {
+    const value = typeof item === "string" ? item : (item.text || item.description || item.name || "");
+    return `<li>${guideText(value)}</li>`;
+  }).join("")}</ul></section>`;
+}
+
+function contributorHtml(contributors = []) {
+  if (!contributors.length) return "";
+  const names = contributors.map((c) => c?.name).filter(Boolean);
+  const roles = contributors.map((c) => c?.role).filter(Boolean);
+  if (!names.length) return "";
+  return `<div class="combat-contributor">
+    <span>FIELD NOTES CONTRIBUTOR</span>
+    <small>Combat Guide by</small>
+    <strong>— ${names.map(guideText).join(" & ")}</strong>
+    ${roles.length ? `<em>${roles.map(guideText).join(" • ")}</em>` : ""}
+  </div>`;
+}
+
+function combatGuideBodyHtml(d, mode) {
+  const { guide, content, scope } = resolveCombatGuide(d, mode);
+  if (!content) {
+    return `<div class="combat-unavailable">
+      <span>FIELD NOTES UNAVAILABLE</span>
+      <b>Combat Guide hazırlanıyor.</b>
+      <p>Bu dinozorun savaş rehberi henüz hazırlanıyor.</p>
+    </div>`;
+  }
+
+  const modeLabel = scope === "shared" ? "ORTAK REHBER" : (scope === "prime" ? (d.primeLabel || "PRIME") : "NORMAL ADULT");
+  return `<div class="combat-guide-scroll">
+    <div class="combat-guide-meta"><span>${guideText(d.name)}</span><b>${guideText(modeLabel)}</b></div>
+    ${content.playstyle ? `<section class="combat-section"><div class="combat-section-title"><span>PLAYSTYLE</span><b>OYNANIŞ TARZI</b></div><p>${guideText(content.playstyle)}</p></section>` : ""}
+    ${content.combatBasics ? `<section class="combat-section"><div class="combat-section-title"><span>COMBAT BASICS</span><b>SAVAŞ MANTIĞI</b></div><p>${guideText(content.combatBasics)}</p></section>` : ""}
+    ${techniqueHtml(content.techniques)}
+    ${matchupHtml(content.matchups)}
+    ${mistakesHtml(content.mistakes)}
+    ${contributorHtml(guide.contributors)}
+  </div>`;
+}
+
+function closeCombatGuidePanel() {
+  const shell = $(".dossier-shell");
+  const trigger = $("#combatGuideToggle");
+  if (shell) shell.classList.remove("combat-open");
+  $("#modal").classList.remove("combat-open");
+  if (trigger) {
+    trigger.classList.remove("active");
+    trigger.setAttribute("aria-expanded", "false");
+  }
+}
+
 function openDino(d) {
-  const openingMode = cardMode;
+  let activeMode = cardMode;
   const caption = (mode) => mode === 'prime' ? (d.primeLabel || 'Prime değerleri') : 'Normal Adult değerleri';
 
-  $("#modalInner").innerHTML = `<div class="dossier">
-    ${imageBlock(d, "dossier-art")}
-    <div class="dossier-copy">
-      <div class="modal-sub">${dietTR[d.diet]} • ${d.tier}</div>
-      <h3>${d.name}</h3>
-      <div class="prime-switch" role="group" aria-label="Stat modu">
-        <button class="${openingMode === 'normal' ? 'active' : ''}" data-mode="normal">NORMAL</button>
-        <button class="${openingMode === 'prime' ? 'active' : ''}" data-mode="prime">PRIME</button>
+  $("#modal").classList.remove("combat-open");
+  $("#modalInner").innerHTML = `<div class="dossier-shell">
+    <div class="dossier">
+      ${imageBlock(d, "dossier-art")}
+      <div class="dossier-copy">
+        <div class="modal-sub">${dietTR[d.diet]} • ${d.tier}</div>
+        <div class="dossier-title-row">
+          <h3>${d.name}</h3>
+          <button class="combat-guide-trigger" id="combatGuideToggle" type="button" aria-expanded="false" aria-controls="combatGuidePanel"><span>⚔</span> COMBAT GUIDE</button>
+        </div>
+        <div class="prime-switch" role="group" aria-label="Stat modu">
+          <button class="${activeMode === 'normal' ? 'active' : ''}" data-mode="normal">NORMAL</button>
+          <button class="${activeMode === 'prime' ? 'active' : ''}" data-mode="prime">PRIME</button>
+        </div>
+        <div class="mode-caption" id="modeCaption">${caption(activeMode)}</div>
+        <div id="modalStats">${statsHtml(d, activeMode)}</div>
+        <div class="ability"><b>İmza Yeteneği</b>${d.ability}</div>
+        <div class="ability" style="margin-top:10px"><b>Öne Çıkan Özellik</b>${d.highlight}</div>
+        ${d.dataNote ? `<div class="data-note">⚑ ${d.dataNote}</div>` : ""}
+        <div class="source-line">${d.source}</div>
       </div>
-      <div class="mode-caption" id="modeCaption">${caption(openingMode)}</div>
-      <div id="modalStats">${statsHtml(d, openingMode)}</div>
-      <div class="ability"><b>İmza Yeteneği</b>${d.ability}</div>
-      <div class="ability" style="margin-top:10px"><b>Öne Çıkan Özellik</b>${d.highlight}</div>
-      ${d.dataNote ? `<div class="data-note">⚑ ${d.dataNote}</div>` : ""}
-      <div class="source-line">${d.source}</div>
     </div>
+    <aside class="combat-guide-panel" id="combatGuidePanel" aria-label="${esc(d.name)} Combat Guide">
+      <div class="combat-panel-head">
+        <div><span>QUI EVRIMA // FIELD DOSSIER</span><b>COMBAT GUIDE</b></div>
+        <button class="combat-panel-close" id="closeCombatGuide" type="button" aria-label="Combat Guide panelini kapat">×</button>
+      </div>
+      <div id="combatGuideBody">${combatGuideBodyHtml(d, activeMode)}</div>
+    </aside>
   </div>`;
 
   $$(".prime-switch button").forEach((btn) => {
     btn.onclick = () => {
       $$(".prime-switch button").forEach((x) => x.classList.remove('active'));
       btn.classList.add('active');
-      const mode = btn.dataset.mode;
-      $("#modalStats").innerHTML = statsHtml(d, mode);
-      $("#modeCaption").textContent = caption(mode);
+      activeMode = btn.dataset.mode;
+      $("#modalStats").innerHTML = statsHtml(d, activeMode);
+      $("#modeCaption").textContent = caption(activeMode);
+      const guideBody = $("#combatGuideBody");
+      if (guideBody) guideBody.innerHTML = combatGuideBodyHtml(d, activeMode);
     };
   });
 
+  $("#combatGuideToggle").onclick = () => {
+    const shell = $(".dossier-shell");
+    const willOpen = !shell.classList.contains("combat-open");
+    shell.classList.toggle("combat-open", willOpen);
+    $("#modal").classList.toggle("combat-open", willOpen);
+    $("#combatGuideToggle").classList.toggle("active", willOpen);
+    $("#combatGuideToggle").setAttribute("aria-expanded", String(willOpen));
+    if (willOpen) $("#combatGuideBody").innerHTML = combatGuideBodyHtml(d, activeMode);
+  };
+
+  $("#closeCombatGuide").onclick = closeCombatGuidePanel;
   $("#modal").showModal();
 }
 
@@ -161,8 +291,14 @@ function renderMuts() {
   $("#mutGrid").innerHTML = arr.map(mutCard).join("");
 }
 
-$("#closeModal").onclick = () => $("#modal").close();
-$("#modal").onclick = (e) => e.target === $("#modal") && $("#modal").close();
+$("#closeModal").onclick = () => { closeCombatGuidePanel(); $("#modal").close(); };
+$("#modal").onclick = (e) => { if (e.target === $("#modal")) { closeCombatGuidePanel(); $("#modal").close(); } };
+$("#modal").addEventListener("cancel", (e) => {
+  if ($("#modal").classList.contains("combat-open")) {
+    e.preventDefault();
+    closeCombatGuidePanel();
+  }
+});
 
 $$("#globalMode button").forEach((b) => {
   b.onclick = () => {
