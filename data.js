@@ -21,49 +21,41 @@ window.DINOS=[
         "biteForce": "201,26"
       }
     },
-   "combatGuide": {
-  "status": "ready",
-
-  "contributors": [
-    {
-      "name": "YAFES",
-      "role": "Allosaurus Player"
-    }
-  ],
-
-  "shared": {
-    "playstyle": "Allosaurus'un en büyük avantajlarından biri hızlı ve seri oynanabilmesidir.\n\nNormal saldırısının hızlı olması sayesinde rakiple sürekli kafa kafaya trade yapmak yerine hareketliliğinizi kullanın. Rakibin etrafında dönerek arka tarafına geçmeye çalışın ve pozisyon bulduğunuz anda seri sol tık saldırılarıyla hasar bırakın.\n\nPozisyon al → Arkasına geç → Seri saldır → Hareket etmeye devam et.\n\nAllosaurus'u sabit durarak hasar takası yapan bir dinozor gibi değil, rakibin arkasını sürekli zorlayan hareketli bir avcı gibi kullanmak daha etkilidir.",
-
-    "combatBasics": "Allosaurus oynarken rakibin üzerine sürekli atlamak doğru bir yaklaşım değildir. Pounce'u her fırsatta kullanmak yerine doğru koşullar oluştuğunda kullanmak çok daha güvenlidir.\n\nEğer grup halinde oynuyorsanız, rakip yalnızsa ve grubunuzun toplam tonajı rakibin tonajından yüksekse, rakibi kontrol altına alabildiğiniz durumlarda Pounce oldukça etkili hale gelir.\n\nBunun dışındaki durumlarda gereksiz Pounce denemeleri Allosaurus'u savunmasız bırakabilir.",
-
-    "techniques": [
-      {
-        "title": "Pounce Kullanımı",
-        "text": "Pounce'u her fırsatta kullanma. Rakip yalnızsa, grubunuzun toplam tonajı rakibin tonajından yüksekse ve rakibi kontrol altında tutabiliyorsanız Pounce çok daha güvenlidir."
+    "combatGuide": {
+      "status": "ready",
+      "contributors": [
+        {
+          "name": "YAFES",
+          "role": "Allosaurus Player"
+        }
+      ],
+      "shared": {
+        "playstyle": "Allosaurus'un en büyük avantajlarından biri hızlı ve seri oynanabilmesidir.\n\nNormal saldırısının hızlı olması sayesinde rakiple sürekli kafa kafaya trade yapmak yerine hareketliliğinizi kullanın. Rakibin etrafında dönerek arka tarafına geçmeye çalışın ve pozisyon bulduğunuz anda seri sol tık saldırılarıyla hasar bırakın.\n\nPozisyon al → Arkasına geç → Seri saldır → Hareket etmeye devam et.\n\nAllosaurus'u sabit durarak hasar takası yapan bir dinozor gibi değil, rakibin arkasını sürekli zorlayan hareketli bir avcı gibi kullanmak daha etkilidir.",
+        "combatBasics": "Allosaurus oynarken rakibin üzerine sürekli atlamak doğru bir yaklaşım değildir. Pounce'u her fırsatta kullanmak yerine doğru koşullar oluştuğunda kullanmak çok daha güvenlidir.\n\nEğer grup halinde oynuyorsanız, rakip yalnızsa ve grubunuzun toplam tonajı rakibin tonajından yüksekse, rakibi kontrol altına alabildiğiniz durumlarda pounce oldukça etkili hale gelir.\n\nBunun dışındaki durumlarda gereksiz pounce denemeleri Allosaurus'u savunmasız bırakabilir.",
+        "techniques": [
+          {
+            "title": "Pounce Kullanımı",
+            "text": "Pounce'u her fırsatta kullanma. Rakip yalnızsa, grubunuzun toplam tonajı rakibin tonajından yüksekse ve rakibi kontrol altında tutabiliyorsanız Pounce çok daha güvenlidir. Uygun olmayan zamanda yapılan Pounce Allosaurus'u savunmasız bırakabilir."
+          },
+          {
+            "title": "Arka Pozisyon & Sürekli Baskı",
+            "text": "Rakiple sürekli kafa kafaya trade yapmak yerine hareketliliğini kullan. Rakibin etrafında dön, arka tarafına geç ve açık bulduğunda seri sol tık saldırıları yap. Pozisyon al → Arkasına geç → Seri saldır → Hareket etmeye devam et."
+          },
+          {
+            "title": "Hit & Run",
+            "text": "Doğrudan uzun süreli dövüşmek istemiyorsanız Allosaurus oldukça güçlü bir vur-kaç oyununa sahiptir. Sol tık basılı tutulduğunda pençe saldırısını kullanarak rakibe hasar bırakıp hızlı şekilde uzaklaşabilirsiniz. Yaklaş → Pençeyi vur → Mesafe aç → Tekrar pozisyon al."
+          }
+        ],
+        "matchups": [],
+        "mistakes": [
+          "Her fırsatta rakibin üzerine Pounce atmak.",
+          "Allosaurus'u sadece Pounce üzerinden oynamak.",
+          "Rakiple uzun süre kafa kafaya trade yapmak.",
+          "Hız ve pozisyon avantajını kullanmadan sabit dövüşmek."
+        ]
       },
-      {
-        "title": "Arka Pozisyon & Sürekli Baskı",
-        "text": "Rakiple sürekli kafa kafaya trade yapmak yerine hareketliliğini kullan. Rakibin etrafında dön, arka tarafına geç ve açık bulduğunda seri sol tık saldırıları yap."
-      },
-      {
-        "title": "Hit & Run",
-        "text": "Uzun süreli trade yapmak istemiyorsan vur-kaç oyna. Sol tık basılı tutulduğunda pençe saldırısını kullanarak hasar bırak ve hızlıca mesafe aç.\n\nYaklaş → Pençeyi vur → Mesafe aç → Tekrar pozisyon al."
-      }
-    ],
-
-    "matchups": [],
-
-    "mistakes": [
-      "Her fırsatta rakibin üzerine Pounce atmak.",
-      "Allosaurus'u sadece Pounce üzerinden oynamak.",
-      "Rakiple uzun süre kafa kafaya trade yapmak.",
-      "Hız ve pozisyon avantajını kullanmadan sabit dövüşmek."
-    ]
-  },
-
-  "normal": null,
-  "prime": null
-},
+      "normal": null,
+      "prime": null
     },
     "dataNote": "Prime değerleri The Dino Den oyun içi profil ekranından doğrulandı.",
     "source": "Prime: The Dino Den • oyun içi profil | Normal: mevcut referans veri",

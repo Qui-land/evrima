@@ -81,3 +81,9 @@ combatGuide: {
 ```
 
 `shared` ortak rehberdir. İleride Normal veya Prime oynanışı farklıysa `normal` ya da `prime` alanına aynı içerik yapısında ayrı rehber eklenebilir. Sistem önce moda özel rehberi, yoksa `shared` rehberi kullanır.
+
+
+## v0.5.4.1
+- Allosaurus Combat Guide aktif edildi.
+- Contributor: YAFES — Allosaurus Player.
+- Cache anahtarları 0541 olarak güncellendi; eski data.js önbelleğinin rehberi pending göstermesi engellendi.
