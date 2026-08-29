@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>QUI Evrima Database v0.5.2</title>
+  <title>QUI Evrima Database v0.5.3</title>
   <meta name="description" content="The Isle: Evrima için Türkçe dinozor, mutasyon ve oynanış veritabanı." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="./style.css?v=053" />
 </head>
 <body>
   <div class="scanlines"></div>
@@ -16,7 +16,7 @@
   <header class="topbar">
     <a class="brand" href="#home">
       <span class="mark">Q</span>
-      <span><b>QUI EVRIMA</b><small>DATABASE • v0.5.2</small></span>
+      <span><b>QUI EVRIMA</b><small>DATABASE • v0.5.3</small></span>
     </a>
     <nav id="nav">
       <a href="#home">Ana Sayfa</a>
@@ -43,8 +43,8 @@
             <a class="btn" href="#mutations">Mutasyonlara göz at</a>
           </div>
           <div class="hero-stats">
-            <div><strong id="dinoCount">0</strong><span>Dinozor</span></div>
-            <div><strong id="mutCount">0</strong><span>Mutation</span></div>
+            <div><strong id="dinoCount">22</strong><span>Dinozor</span></div>
+            <div><strong id="mutCount">35</strong><span>Mutation</span></div>
             <div><strong>3</strong><span>Beslenme Türü</span></div>
           </div>
         </div>
@@ -52,18 +52,22 @@
       </div>
     </section>
 
-    <section class="category-row">
-      <button class="cat carnivore" data-diet="carnivore" style="--cat-image:url('assets/categories/carnivore.webp')">
-        <span class="cat-copy"><b>Carnivore</b><span>Etçiller</span><small><span id="countCarnivore">0</span> DİNOZOR</small></span><i>→</i>
+    <section class="category-row categories">
+      <button class="cat category-card category-carnivore carnivore" data-diet="carnivore">
+        <img class="category-image" src="./assets/categories/carnivore.webp" alt="Carnivore kategori görseli" />
+        <span class="cat-copy category-content"><b>Carnivore</b><span>Etçiller</span><small><span id="countCarnivore">11</span> DİNOZOR</small></span><i>→</i>
       </button>
-      <button class="cat herbivore" data-diet="herbivore" style="--cat-image:url('assets/categories/herbivore.webp')">
-        <span class="cat-copy"><b>Herbivore</b><span>Otçullar</span><small><span id="countHerbivore">0</span> DİNOZOR</small></span><i>→</i>
+      <button class="cat category-card category-herbivore herbivore" data-diet="herbivore">
+        <img class="category-image" src="./assets/categories/herbivore.webp" alt="Herbivore kategori görseli" />
+        <span class="cat-copy category-content"><b>Herbivore</b><span>Otçullar</span><small><span id="countHerbivore">9</span> DİNOZOR</small></span><i>→</i>
       </button>
-      <button class="cat omnivore" data-diet="omnivore" style="--cat-image:url('assets/categories/omnivore.webp')">
-        <span class="cat-copy"><b>Omnivore</b><span>Hepçiller</span><small><span id="countOmnivore">0</span> DİNOZOR</small></span><i>→</i>
+      <button class="cat category-card category-omnivore omnivore" data-diet="omnivore">
+        <img class="category-image" src="./assets/categories/omnivore.webp" alt="Omnivore kategori görseli" />
+        <span class="cat-copy category-content"><b>Omnivore</b><span>Hepçiller</span><small><span id="countOmnivore">2</span> DİNOZOR</small></span><i>→</i>
       </button>
-      <button class="cat mutations" data-go="mutations" style="--cat-image:url('assets/categories/mutations.webp')">
-        <span class="cat-copy"><b>Mutations</b><span>Mutasyonlar</span><small><span id="countMutations">0</span> MUTATION</small></span><i>→</i>
+      <button class="cat category-card category-mutations mutations" data-go="mutations">
+        <img class="category-image" src="./assets/categories/mutations.webp" alt="Mutations kategori görseli" />
+        <span class="cat-copy category-content"><b>Mutations</b><span>Mutasyonlar</span><small><span id="countMutations">35</span> MUTATION</small></span><i>→</i>
       </button>
     </section>
 
@@ -150,11 +154,11 @@
   </dialog>
 
   <footer>
-    <div><b>QUI EVRIMA DATABASE</b><small>v0.5.2 • Bağımsız fan projesi</small></div>
+    <div><b>QUI EVRIMA DATABASE</b><small>v0.5.3 • Bağımsız fan projesi</small></div>
     <p>Veriler patch ve sunucu ayarlarına göre değişebilir.</p>
   </footer>
 
-  <script src="data.js"></script>
-  <script src="script.js"></script>
+  <script src="./data.js?v=053"></script>
+  <script src="./script.js?v=053"></script>
 </body>
 </html>
