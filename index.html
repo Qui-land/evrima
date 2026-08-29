@@ -1,66 +1,168 @@
 <!DOCTYPE html>
-
 <html lang="tr">
 <head>
-<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
-<title>QUI Evrima Database v0.5</title>
-<meta content="The Isle: Evrima için Türkçe dinozor, mutasyon ve oynanış veritabanı." name="description"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>QUI Evrima Database v0.5.1</title>
+  <meta name="description" content="The Isle: Evrima için Türkçe dinozor, mutasyon ve oynanış veritabanı." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<div class="scanlines"></div>
-<header class="topbar">
-<a class="brand" href="#home"><span class="mark">Q</span><span><b>QUI EVRIMA</b><small>DATABASE • v0.5</small></span></a>
-<nav id="nav"><a href="#home">Ana Sayfa</a><a href="#dinosaurs">Dinozorlar</a><a href="#mutations">Mutasyonlar</a><a href="#guides">Rehberler</a></nav>
-<button class="menu" id="menuBtn">☰</button>
-</header>
-<main id="home">
-<section class="hero">
-<div class="hero-copy">
-<div class="eyebrow">THE ISLE: EVRIMA • TÜRKÇE VERİTABANI</div>
-<h1>Hayatta kal.<br/><em>Avlan. Evrimleş.</em></h1>
-<p>Dinozor istatistikleri, yetenekler ve mutation verileri tek yerde. v0.5 ile Normal Adult ve Prime Peak değerleri arasında anında geçiş yapabilirsin.</p>
-<div class="actions"><a class="btn primary" href="#dinosaurs">Dinozorları keşfet</a><a class="btn" href="#mutations">Mutasyonlara göz at</a></div>
-<div class="hero-stats"><div><strong id="dinoCount">0</strong><span>Dinozor</span></div><div><strong id="mutCount">0</strong><span>Doğrulanmış mutation</span></div><div><strong>3</strong><span>Beslenme türü</span></div></div>
-</div>
-<div aria-hidden="true" class="hero-art hero-data"><div class="radar-ring r1"></div><div class="radar-ring r2"></div><div class="radar-ring r3"></div><div class="hero-readout"><span>EVRIMA FIELD DATABASE</span><b>NORMAL / PRIME</b><small>Prime aşaması türe göre %87,5 / %92 / %100 olabilir</small></div><div class="hero-coordinate">QUI // v0.5 // LIVE DATA</div></div>
-</section>
-<section class="category-row">
-<button class="cat carnivore" data-diet="carnivore" style="--cat-image:url('assets/categories/carnivore.webp')"><span class="cat-copy"><b>Carnivore</b><span>Etçiller</span><small>11 DİNOZOR</small></span><i>→</i></button>
-<button class="cat herbivore" data-diet="herbivore" style="--cat-image:url('assets/categories/herbivore.webp')"><span class="cat-copy"><b>Herbivore</b><span>Otçullar</span><small>9 DİNOZOR</small></span><i>→</i></button>
-<button class="cat omnivore" data-diet="omnivore" style="--cat-image:url('assets/categories/omnivore.webp')"><span class="cat-copy"><b>Omnivore</b><span>Hepçiller</span><small>2 DİNOZOR</small></span><i>→</i></button>
-<button class="cat mutations" data-go="mutations"><span class="cat-copy"><b>Mutations</b><span>Mutation Database</span><small>35 MUTATION</small></span><i>→</i></button>
-</section>
-<section class="panel" id="dinosaurs">
-<div class="section-title"><div><span class="eyebrow">PLAYABLE DATABASE</span><h2>Dinozorlar</h2><p>Kartlara tıklayarak detayları incele. Profil içinde Normal ve Prime değerleri arasında geçiş yapabilirsin. Prime aşaması tür bazında ayrıca belirtilir.</p></div></div>
-<div class="toolbar">
-<div class="filters" id="dinoFilters"><button class="active" data-filter="all">Tümü</button><button data-filter="carnivore">Carnivore</button><button data-filter="herbivore">Herbivore</button><button data-filter="omnivore">Omnivore</button></div><div aria-label="Kart stat modu" class="global-mode" id="globalMode" role="group"><button class="active" data-mode="normal">NORMAL</button><button data-mode="prime">PRIME</button></div>
-<label class="search"><span>⌕</span><input id="dinoSearch" placeholder="Dinozor ara..."/></label>
-<select id="sortDino"><option value="name">A → Z</option><option value="diet">Beslenme türü</option><option value="tier">Sınıf</option></select>
-</div>
-<div class="dino-grid" id="dinoGrid"></div>
-</section>
-<section class="panel" id="mutations">
-<div class="section-title"><div><span class="eyebrow">MUTATION DATABASE</span><h2>Mutasyonlar</h2><p>İngilizce ad korunur; Türkçesi parantez içindedir. Sunucudan doğruladığımız yüzde değerleri önceliklidir.</p></div><div class="warning">Patch ve sunucuya göre değerler değişebilir.</div></div>
-<div class="toolbar">
-<div class="filters" id="mutFilters"><button class="active" data-filter="all">Tümü</button><button data-filter="combat">Savaş</button><button data-filter="health">Health</button><button data-filter="food">Beslenme</button><button data-filter="water">Su</button><button data-filter="stamina">Stamina</button></div>
-<label class="search"><span>⌕</span><input id="mutSearch" placeholder="Mutation ara..."/></label>
-</div>
-<div class="mut-grid" id="mutGrid"></div>
-</section>
-<section class="panel guides" id="guides">
-<div class="section-title"><div><span class="eyebrow">HIZLI REHBERLER</span><h2>Oyunun Temelleri</h2></div></div>
-<div class="guide-grid">
-<article><span>01</span><h3>Diyet Sistemi</h3><p><b>S</b> Protein, <b>//</b> Yağ ve <b>∴</b> Karbonhidrat. Diet'in %100 olması buff'lardan yararlanmak için önemlidir.</p></article>
-<article><span>02</span><h3>Organlar</h3><p>Bağırsaklar <b>//</b>, akciğerler <b>∴</b>, kalp <b>S</b> verir. Mide, avın son yediği besini taşır.</p></article>
-<article><span>03</span><h3>Migration</h3><p>Herbivore ve Omnivore türleri food için Migration Zone'ları takip eder. Carnivore için bu bölgeler av ve AI fırsatı yaratır.</p></article>
-<article><span>04</span><h3>Elder</h3><p>Prime Elder için görevleri %75 growth öncesinde tamamlamak gerekir; ilerleme ölümle sıfırlanabilir.</p></article>
-</div>
-</section>
-</main>
-<dialog id="modal"><button id="closeModal">×</button><div id="modalInner"></div></dialog>
-<footer><div><b>QUI EVRIMA DATABASE</b><small>v0.5 • Bağımsız fan projesi</small></div><p>Veriler patch ve sunucu ayarlarına göre değişebilir.</p></footer>
-<script src="data.js"></script><script src="script.js"></script>
-</body></html>
+  <div class="scanlines"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#home">
+      <span class="mark">Q</span>
+      <span><b>QUI EVRIMA</b><small>DATABASE • v0.5.1</small></span>
+    </a>
+    <nav id="nav">
+      <a href="#home">Ana Sayfa</a>
+      <a href="#dinosaurs">Dinozorlar</a>
+      <a href="#mutations">Mutasyonlar</a>
+      <a href="#guides">Rehberler</a>
+    </nav>
+    <button class="menu" id="menuBtn">☰</button>
+  </header>
+
+  <main id="home">
+    <section class="hero hero-cinematic">
+      <div class="hero-overlay"></div>
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <div class="eyebrow">THE ISLE: EVRIMA • TÜRKÇE VERİTABANI</div>
+          <h1>Hayatta kal.<br /><em>Avlan. Evrimleş.</em></h1>
+          <p>
+            Dinozor istatistikleri, yetenekler ve güncel mutation verileri tek yerde.
+            Normal Adult ve Prime verileri arasında hızlıca geçiş yap, türleri ara ve filtrele.
+          </p>
+          <div class="actions">
+            <a class="btn primary" href="#dinosaurs">Dinozorları keşfet</a>
+            <a class="btn" href="#mutations">Mutasyonlara göz at</a>
+          </div>
+          <div class="hero-stats">
+            <div><strong id="dinoCount">0</strong><span>Dinozor</span></div>
+            <div><strong id="mutCount">0</strong><span>Mutation</span></div>
+            <div><strong>3</strong><span>Beslenme Türü</span></div>
+          </div>
+        </div>
+
+        <div class="hero-side" aria-hidden="true">
+          <div class="hero-data hero-readout-card">
+            <span>EVRIMA FIELD DATABASE</span>
+            <b>NORMAL / PRIME</b>
+            <small>Prime aşaması türe göre %87,5 / %92 / %100 olabilir</small>
+          </div>
+          <div class="hero-coordinate">QUI // v0.5.1 // LIVE DATA</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="category-row">
+      <button class="cat carnivore" data-diet="carnivore" style="--cat-image:url('assets/categories/carnivore.webp')">
+        <span class="cat-copy"><b>Carnivore</b><span>Etçiller</span><small><span id="countCarnivore">0</span> DİNOZOR</small></span><i>→</i>
+      </button>
+      <button class="cat herbivore" data-diet="herbivore" style="--cat-image:url('assets/categories/herbivore.webp')">
+        <span class="cat-copy"><b>Herbivore</b><span>Otçullar</span><small><span id="countHerbivore">0</span> DİNOZOR</small></span><i>→</i>
+      </button>
+      <button class="cat omnivore" data-diet="omnivore" style="--cat-image:url('assets/categories/omnivore.webp')">
+        <span class="cat-copy"><b>Omnivore</b><span>Hepçiller</span><small><span id="countOmnivore">0</span> DİNOZOR</small></span><i>→</i>
+      </button>
+      <button class="cat mutations" data-go="mutations">
+        <span class="cat-copy"><b>Mutations</b><span>Mutasyonlar</span><small><span id="countMutations">0</span> MUTATION</small></span><i>→</i>
+      </button>
+    </section>
+
+    <section class="panel" id="dinosaurs">
+      <div class="section-title">
+        <div>
+          <span class="eyebrow">PLAYABLE DATABASE</span>
+          <h2>Tüm Dinozorlar</h2>
+          <p>Kartlara tıklayarak detayları incele. Profil içinde Normal ve Prime değerleri arasında geçiş yapabilirsin.</p>
+        </div>
+      </div>
+
+      <div class="toolbar toolbar-dino">
+        <div class="toolbar-left">
+          <div class="global-mode" id="globalMode" role="group" aria-label="Kart stat modu">
+            <button class="active" data-mode="normal">NORMAL</button>
+            <button data-mode="prime">PRIME</button>
+          </div>
+        </div>
+        <div class="toolbar-right">
+          <label class="search search-hero">
+            <span>⌕</span>
+            <input id="dinoSearch" placeholder="Dinozor ara..." />
+          </label>
+          <select id="dietSelect">
+            <option value="all">Tüm Sınıflar</option>
+            <option value="carnivore">Carnivore</option>
+            <option value="herbivore">Herbivore</option>
+            <option value="omnivore">Omnivore</option>
+          </select>
+          <select id="sortDino">
+            <option value="name">A - Z</option>
+            <option value="diet">Beslenme Türü</option>
+            <option value="tier">Tier</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="dino-grid" id="dinoGrid"></div>
+    </section>
+
+    <section class="panel" id="mutations">
+      <div class="section-title">
+        <div>
+          <span class="eyebrow">MUTATION DATABASE</span>
+          <h2>Mutasyonlar</h2>
+          <p>İngilizce ad korunur; Türkçesi parantez içindedir. Sunucudan doğruladığımız yüzde değerleri önceliklidir.</p>
+        </div>
+        <div class="warning">Patch ve sunucuya göre değerler değişebilir.</div>
+      </div>
+      <div class="toolbar">
+        <div class="filters" id="mutFilters">
+          <button class="active" data-filter="all">Tümü</button>
+          <button data-filter="combat">Savaş</button>
+          <button data-filter="health">Health</button>
+          <button data-filter="food">Beslenme</button>
+          <button data-filter="water">Su</button>
+          <button data-filter="stamina">Stamina</button>
+        </div>
+        <label class="search"><span>⌕</span><input id="mutSearch" placeholder="Mutation ara..." /></label>
+      </div>
+      <div class="mut-grid" id="mutGrid"></div>
+    </section>
+
+    <section class="panel guides" id="guides">
+      <div class="section-title">
+        <div>
+          <span class="eyebrow">HIZLI REHBERLER</span>
+          <h2>Oyunun Temelleri</h2>
+        </div>
+      </div>
+      <div class="guide-grid">
+        <article><span>01</span><h3>Diyet Sistemi</h3><p><b>S</b> Protein, <b>//</b> Yağ ve <b>∴</b> Karbonhidrat. Diet'in %100 olması buff'lardan yararlanmak için önemlidir.</p></article>
+        <article><span>02</span><h3>Organlar</h3><p>Bağırsaklar <b>//</b>, akciğerler <b>∴</b>, kalp <b>S</b> verir. Mide, avın son yediği besini taşır.</p></article>
+        <article><span>03</span><h3>Migration</h3><p>Herbivore ve Omnivore türleri food için Migration Zone'ları takip eder. Carnivore için bu bölgeler av ve AI fırsatı yaratır.</p></article>
+        <article><span>04</span><h3>Elder</h3><p>Prime Elder için görevleri %75 growth öncesinde tamamlamak gerekir; ilerleme ölümle sıfırlanabilir.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="modal">
+    <button id="closeModal">×</button>
+    <div id="modalInner"></div>
+  </dialog>
+
+  <footer>
+    <div><b>QUI EVRIMA DATABASE</b><small>v0.5.1 • Bağımsız fan projesi</small></div>
+    <p>Veriler patch ve sunucu ayarlarına göre değişebilir.</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
